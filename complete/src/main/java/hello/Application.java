@@ -50,15 +50,14 @@ public class Application {
 		repository.save(new Customer("Michelle", "Dessler"));
 
 
-		//List<Customer> customers = new ArrayList<Customer>();
+		List<Customer> customers = new ArrayList<Customer>();
 
 
-		//Iterable<Customer> iterator = repository.findAll();
-		//iterator.forEach(customers::add);
+		Iterable<Customer> iterator = repository.findAll();
+		iterator.forEach(customers::add);
 
-		//return "Congratulations. You haver inserted a few rows: " + customers.size();
+		return "Congratulations! You have inserted a few rows: " + customers.size();
 
-		return "Congratulations. You haver inserted a few rows: ";
 	}
 
 	public static void main(String[] args) {
