@@ -20,7 +20,7 @@ Demo gradle project with spring boot + Docker + Java 13 + Alpine distr
 * Scheduling some job
 * Development, preproduction and production  profiles
 * Spring security with LDAP & CAS integration
-
+* @InitBinder, @ModelAttribute  ..
 
 ## backlog / wish list
 

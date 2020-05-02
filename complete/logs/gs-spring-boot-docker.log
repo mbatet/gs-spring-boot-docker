@@ -89,3 +89,36 @@
 2020-05-02 21:40:12,103 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2020-05-02 21:40:12,111 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 7 ms
 2020-05-02 21:40:26,130 INFO hello.controller.CustomerController [http-nio-8080-exec-3] [m:insertData] =============> El log funciona!!!! <=============
+2020-05-02 22:03:30,732 INFO org.springframework.boot.StartupInfoLogger [Test worker] Starting HelloWorldConfigurationTests on Ubuntu18-4-LTR with PID 30677 (started by user1 in /home/user1/gitprojects/gs-spring-boot-docker/complete)
+2020-05-02 22:03:30,736 DEBUG org.springframework.boot.StartupInfoLogger [Test worker] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-05-02 22:03:30,740 INFO org.springframework.boot.SpringApplication [Test worker] No active profile set, falling back to default profiles: default
+2020-05-02 22:03:31,213 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-02 22:03:31,265 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 45ms. Found 3 repository interfaces.
+2020-05-02 22:03:31,700 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [Test worker] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-02 22:03:32,069 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat initialized with port(s): 0 (http)
+2020-05-02 22:03:32,081 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing ProtocolHandler ["http-nio-auto-1"]
+2020-05-02 22:03:32,082 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting service [Tomcat]
+2020-05-02 22:03:32,082 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-05-02 22:03:32,184 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing Spring embedded WebApplicationContext
+2020-05-02 22:03:32,185 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [Test worker] Root WebApplicationContext: initialization completed in 1415 ms
+2020-05-02 22:03:32,319 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2020-05-02 22:03:32,503 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-02 22:03:32,567 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate Core {5.4.8.Final}
+2020-05-02 22:03:32,681 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [Test worker] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-02 22:03:32,826 INFO org.hibernate.dialect.Dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-02 22:03:33,561 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-02 22:03:33,567 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-02 22:03:34,106 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-02 22:03:34,321 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-02 22:03:34,605 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting ProtocolHandler ["http-nio-auto-1"]
+2020-05-02 22:03:34,623 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat started on port(s): 38943 (http) with context path ''
+2020-05-02 22:03:34,627 INFO org.springframework.boot.StartupInfoLogger [Test worker] Started HelloWorldConfigurationTests in 4.278 seconds (JVM running for 5.289)
+2020-05-02 22:03:34,888 INFO org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-02 22:03:34,894 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-05-02 22:03:34,911 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Completed initialization in 17 ms
+2020-05-02 22:03:34,935 INFO hello.controller.CustomerController [http-nio-auto-1-exec-1] [m:retrieveData] =============> El log funciona!!!! <=============
+2020-05-02 22:03:35,053 INFO hello.Application [http-nio-auto-1-exec-2] HELLO
+2020-05-02 22:03:35,064 INFO hello.controller.CustomerController [http-nio-auto-1-exec-3] [m:insertData] =============> El log funciona!!!! <=============
+2020-05-02 22:03:35,120 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-02 22:03:35,122 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-02 22:03:35,124 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'

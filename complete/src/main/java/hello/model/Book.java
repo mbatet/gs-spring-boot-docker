@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 public class Book {
-    
+
   //https://github.com/laurasnchezglez/micronaut-library-example
 
     @Id
