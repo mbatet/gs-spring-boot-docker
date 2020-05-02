@@ -39,15 +39,32 @@ public class CustomerController {
         //Genre(@NotNull String name)
         //Book(@NotNull String name, @NotNull String isbn, Genre genre)
 
+        return "Congratulations! You have inserted a few rows!";
+
+    }
+
+
+
+    //http://localhost:8080/customer/retrieveData
+    @RequestMapping("/retrieveData")
+    public String retrieveData()
+    {
 
         List<Customer> customers = new ArrayList<Customer>();
         Iterable<Customer> iterator = repository.findAll();  //no ha calgut definir el metode findAll
         iterator.forEach(customers::add);
         Optional<Customer> customer = repository.findById(Long.valueOf(1)); //no ha calgut definir el metode findById
+        List<Customer> someCustomers = repository.findByLastName("Dessler"); //no ha calgut definir el metode findByLastName, només declarar-lo
+        List<String> customersWithPartOfName = repository.findUsersWithPartOfName("Ki");  //aquest metode si te una query jpa
 
-        List<Customer> someCustomers = repository.findByLastName("Dessler"); //no ha calgut definir el metode findById
+        String result =" repository.findAll(): " + customers.size()  + " customer rows";
+        result += "<br/>Customers: " + customers;
+        result += "<br/>repository.findById(1): " +  (customer.isPresent()? customer.get().toString():"");
+        result += "<br/>repository.findByLastName('Dessler'): " + someCustomers.size();
+        result += "<br/>repository.findUsersWithPartOfName('Ki')): " +customersWithPartOfName;
 
-        return "Congratulations! You have inserted a few rows: " + customers.size() + " ... The customer (1) is " + (customer.isPresent()? customer.get().toString():"") + " ... we have found " + someCustomers.size() + " customers with the lastName 'Dessler'";
+
+        return result;
 
     }
 }
