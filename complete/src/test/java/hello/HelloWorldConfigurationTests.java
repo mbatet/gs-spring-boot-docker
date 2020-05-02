@@ -50,7 +50,14 @@ public class HelloWorldConfigurationTests {
 	@Test
 	public void testInserts() throws Exception {
 		ResponseEntity<String> entity = restTemplate
-				.getForEntity("http://localhost:" + this.port + "/insertData", String.class);
+				.getForEntity("http://localhost:" + this.port + "/customer/insertData", String.class);
+		assertEquals(HttpStatus.OK, entity.getStatusCode());
+	}
+
+	@Test
+	public void testRetrieve() throws Exception {
+		ResponseEntity<String> entity = restTemplate
+				.getForEntity("http://localhost:" + this.port + "/customer/retrieveData", String.class);
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 	}
 
