@@ -21,12 +21,22 @@ public class Application {
 
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
 
-
-
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
 
+	@RequestMapping("/")
+	public String home() {
 
+		log.info("HELLO");
+
+		//Un cosa que es pot fer només desde Java 11,
+		// aixi ens assegurem que el host realment s'esta executant en un java superior a 8
+		var greeting = "Hello Docker World.  System.getProperty(\"java.version\") is....: " + System.getProperty("java.version");
+
+		return greeting;
+
+
+	}
 
 }
