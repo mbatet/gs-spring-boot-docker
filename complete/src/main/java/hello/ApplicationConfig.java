@@ -19,13 +19,6 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 class ApplicationConfig {
 
-    //https://github.com/spring-guides
-    //https://docs.spring.io/spring-data/data-jpa/docs/1.5.x/reference/html/index.html
-    //https://docs.spring.io/spring-data/data-jpa/docs/1.5.x/reference/html/jpa.repositories.html
-    //https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference
-    //https://spring.io/guides/gs/accessing-data-jpa/
-    //https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa
-    //https://github.com/eugenp/tutorials/blob/master/persistence-modules/spring-persistence-simple
 
     @Bean
     public DataSource dataSource() {

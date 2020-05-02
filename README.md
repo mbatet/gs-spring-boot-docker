@@ -6,16 +6,16 @@ Demo gradle project with spring boot + Docker + Java 13 + Alpine distr
 
 ## Basic application content
 
+* A Dockerfile
 * spring boot application
 * spring data jpa (h2 database + model entities + repository + saving and retrieving entities)
-* A Dockerfile
+* lombok for getters and setters
 
 ## Roadmap
 
 * logback
-* lombok
+* A /customer controller & service class to do the processing that now is in Application.java class
 * A controller to manage the REST API to save and retrieve entities
-* A service class to do something
 * Cache
 * Scheduling some job
 * some views
