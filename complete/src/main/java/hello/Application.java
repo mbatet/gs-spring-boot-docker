@@ -40,6 +40,8 @@ public class Application {
 
 	//http://localhost:8080/insertData
 
+
+
 	@RequestMapping("/insertData")
 	public String insertData()
 	{

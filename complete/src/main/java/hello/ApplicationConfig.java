@@ -25,6 +25,7 @@ class ApplicationConfig {
     //https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference
     //https://spring.io/guides/gs/accessing-data-jpa/
     //https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa
+    //https://github.com/eugenp/tutorials/blob/master/persistence-modules/spring-persistence-simple
 
     @Bean
     public DataSource dataSource() {
@@ -32,6 +33,19 @@ class ApplicationConfig {
         EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
         //return builder.setType(EmbeddedDatabaseType.HSQL).build();
         return builder.setType(EmbeddedDatabaseType.H2).build();
+
+        /*
+        //També haguessim pogut fer:
+
+         final BasicDataSource dataSource = new BasicDataSource();
+        dataSource.setDriverClassName(Preconditions.checkNotNull(env.getProperty("dataSource.driverClassName")));
+        dataSource.setUrl(Preconditions.checkNotNull(env.getProperty("dataSource.url")));
+        dataSource.setUsername(Preconditions.checkNotNull(env.getProperty("dataSource.username")));
+        dataSource.setPassword(Preconditions.checkNotNull(env.getProperty("dataSource.password")));
+        return dataSource;
+
+         */
+
     }
 
     @Bean
@@ -40,9 +54,18 @@ class ApplicationConfig {
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         vendorAdapter.setGenerateDdl(true);
 
+        /*
+        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
+        hibernateProperties.setProperty("hibernate.dialect", env.getProperty("hibernate.dialect"));
+        hibernateProperties.setProperty("hibernate.show_sql", "true");
+        * */
+
+
+
+
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("hello");
+        factory.setPackagesToScan("hello.model");
         factory.setDataSource(dataSource());
         return factory;
     }
