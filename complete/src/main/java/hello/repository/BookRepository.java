@@ -19,5 +19,5 @@ public interface BookRepository extends CrudRepository<Book, Long> {
 
     /*En cas de afegir una nova consulta una mica mes complexa, es pot fer servir la annotació '@Query'*/
     @Query("FROM Book p WHERE p.genre.name = :name")
-    Optional<Book> findByGenreName(String name);
+    List<Book> findByGenreName(String name);
 }
