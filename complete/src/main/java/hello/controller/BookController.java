@@ -73,7 +73,7 @@ public class BookController {
      * */
     @RequestMapping(value = "/", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
     @Transactional
-    public Book put(@NotNull Book book, BindingResult result) {
+    public Book put(@RequestBody @NotNull Book book, BindingResult result) {
 
         log.info("[m:put] ===================> PERSISTIM NOU LLIBRE: " + book);
         Book bookPersisted = bookRepository.save(book);

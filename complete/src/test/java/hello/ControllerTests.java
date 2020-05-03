@@ -131,11 +131,13 @@ public class ControllerTests {
 
 		log.info("==============> newBook: " + newBook);
 
-		//restTemplate.put("http://localhost:" + this.port + "/books/", newBook);
 
-		HttpHeaders headers = new HttpHeaders();
-		HttpEntity<Book> requestEntity = new HttpEntity<Book>(newBook, headers);
-		ResponseEntity<Book> persistedBookResponse = restTemplate.exchange("http://localhost:" + this.port + "/books/", HttpMethod.PUT, requestEntity, Book.class);
+
+		restTemplate.put("http://localhost:" + this.port + "/books/", newBook);
+
+		//HttpHeaders headers = new HttpHeaders();
+		//HttpEntity<Book> requestEntity = new HttpEntity<Book>(newBook, headers);
+		//ResponseEntity<Book> persistedBookResponse = restTemplate.exchange("http://localhost:" + this.port + "/books/", HttpMethod.PUT, requestEntity, Book.class);
 
 
 		Iterable<Book> iterator = bookRepository.findAll();

@@ -18,6 +18,7 @@ public class Book {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
+
     @NotNull
     @Column(name = "name", nullable = false)
     private String name;
@@ -47,4 +48,5 @@ public class Book {
                 ", genre=" + genre +
                 '}';
     }
+
 }
