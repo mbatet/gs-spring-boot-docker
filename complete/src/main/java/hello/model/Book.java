@@ -12,6 +12,8 @@ import javax.validation.constraints.NotNull;
 @Setter
 public class Book {
 
+  //https://github.com/laurasnchezglez/micronaut-library-example
+
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
@@ -29,7 +31,7 @@ public class Book {
 
     public Book() {}
 
-    public Book(@NotNull String name, @NotNull String isbn, Genre genre) {
+    public Book(@NotNull String name, @NotNull String isbn, @NotNull  Genre genre) {
         this.isbn = isbn;
         this.name = name;
         this.genre = genre;
