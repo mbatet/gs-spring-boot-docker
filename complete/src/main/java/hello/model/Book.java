@@ -31,7 +31,7 @@ public class Book {
 
     public Book() {}
 
-    public Book(@NotNull String name, @NotNull String isbn, Genre genre) {
+    public Book(@NotNull String name, @NotNull String isbn, @NotNull  Genre genre) {
         this.isbn = isbn;
         this.name = name;
         this.genre = genre;

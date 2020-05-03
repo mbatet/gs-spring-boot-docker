@@ -18,6 +18,9 @@ package hello;
 import static org.junit.Assert.*;
 
 import hello.model.Book;
+import hello.model.Genre;
+import hello.repository.BookRepository;
+import hello.repository.GenreRepository;
 import hello.service.AdminService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,20 +31,21 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @DirtiesContext
-public class HelloWorldConfigurationTests {
+public class ControllerTests {
 
-	private static final Logger log = LoggerFactory.getLogger(HelloWorldConfigurationTests.class);
+	private static final Logger log = LoggerFactory.getLogger(ControllerTests.class);
 
 	@LocalServerPort
 	private int port;
@@ -52,8 +56,15 @@ public class HelloWorldConfigurationTests {
 	@Autowired
 	private AdminService adminService;
 
+	@Autowired
+	private GenreRepository genreRepository;
+
+	@Autowired
+	private BookRepository bookRepository;
+
+
 	@Test
-	public void testGreeting() throws Exception {
+	public void testMain() throws Exception {
 		ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:" + this.port + "/", String.class);
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 	}
@@ -76,14 +87,6 @@ public class HelloWorldConfigurationTests {
 	}
 
 
-	/*
-	*     @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-
-    @RequestMapping(value = "/genre/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Book get(@NotNull String genrename) {
-    @RequestMapping(value = "/", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Book put(@NotNull Book book, BindingResult result) {
-    * */
 
 	@Test
 	public void testBookController() throws Exception {
@@ -110,6 +113,8 @@ public class HelloWorldConfigurationTests {
 		List<Book> listBooks =  listBooksResponse.getBody();
 		log.info("listBooks" + listBooks);
 		assertTrue(listBooks.size()>1);
+		int sizeBefore = listBooks.size();
+		log.info("listBooks.size(): " +sizeBefore);
 
 
 		//Comprovem que podem recuperar un llistat de llibres per genere
@@ -117,8 +122,29 @@ public class HelloWorldConfigurationTests {
 		assertEquals(HttpStatus.OK, listBooksResponseByGenre.getStatusCode());
 
 		List<Book> listBooksByGenre =  listBooksResponse.getBody();
-		log.info("listBooksByGenre" + listBooksByGenre);
+		log.info("listBooksByGenre: " + listBooksByGenre);
 		assertTrue(listBooksByGenre.size()>1);
+
+
+		Optional<Genre> genre = genreRepository.findByName("Adventure");
+		Book newBook = new Book("The Lion, the Witch and the Wardrobe","12345800", genre.get());
+
+		log.info("==============> newBook: " + newBook);
+
+		//restTemplate.put("http://localhost:" + this.port + "/books/", newBook);
+
+		HttpHeaders headers = new HttpHeaders();
+		HttpEntity<Book> requestEntity = new HttpEntity<Book>(newBook, headers);
+		ResponseEntity<Book> persistedBookResponse = restTemplate.exchange("http://localhost:" + this.port + "/books/", HttpMethod.PUT, requestEntity, Book.class);
+
+
+		Iterable<Book> iterator = bookRepository.findAll();
+		List<Book> books = new ArrayList<Book>();
+		iterator.forEach(books::add);
+
+		log.info("==============> books.size(): " + books.size());
+
+		assertTrue(books.size()==sizeBefore+1 );
 
 	}
 
