@@ -65,7 +65,9 @@ configurations {
     compile ("com.h2database:h2:1.4.197")
 
     compileOnly 'org.projectlombok:lombok'
+    compile 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+
 
 }
 
