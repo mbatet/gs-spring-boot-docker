@@ -46,5 +46,10 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 
 ## Credits
 
-matet@gmail.com
+matet@gmail.com (Marina Batet)
+
+*https://github.com/spring-guides/gs-serving-web-content
+*https://spring.io/guides/gs/accessing-data-jpa/
+*https://spring.io/guides/gs/spring-boot-docker/
+
 
