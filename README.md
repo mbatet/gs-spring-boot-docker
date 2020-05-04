@@ -21,7 +21,7 @@ Demo gradle project with spring boot + Docker + Java 13 + Alpine distr
 * Cache
 * Scheduling some job
 * Development, preproduction and production  profiles
-* @InitBinder, @ModelAttribute  ..
+* Utilitats bàsiques: @InitBinder, @ModelAttribute, Interception (HandlerMapping) ...
 * Utilitzar ~~RestTemplate~~ WebClient
 * Passar els test de TestRestTemplate a WebTestClient
 * Spring security with LDAP & CAS integration
