@@ -31,8 +31,8 @@ Demo gradle project with spring boot + Docker + Java 13 + Alpine distr
 
 * A controller to manage the REST API to save and retrieve entities (marshalling, unmarshalling, jackson annotations, jackson json views ...)
 * testing
+* thymeleaf templates for the shared parts (headers, menu...) and add css styling and js static files
 * retrieve actuator data
-
 * spring data REST: makes it easy to build hypermedia-driven REST web services on top of Spring Data repositories
 * add additional spring data goodies: pagination, sorting, query by example, support for transparent auditing (created, last changed)...
 * spring cloud bus (to make a distributed system)
