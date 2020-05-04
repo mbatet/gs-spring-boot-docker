@@ -12,8 +12,8 @@ Demo gradle project with spring boot + Docker + Java 13 + Alpine distr
 * added the basic MVC pattern with a controller and a service layer: CustomerController, CustomerService ...
 * added basic spring data jpa functionalities  (h2 database + model entities + repository + saving and retrieving entities + dynamic query derivated from repository method names): Customer, CustomerRepository
 * logback
-* Test controllers with junit tests using TestRestTemplate
-* Added basic thymeleaf template
+* Test the rest controllers with junit tests using TestRestTemplate
+* Added basic thymeleaf template, tested teh controller with a @WebMvcTest test
 
 ## Roadmap
 

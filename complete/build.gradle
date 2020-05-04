@@ -47,7 +47,14 @@ configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
+
+    /*
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }*/
 }
+
 
     dependencies {
 
@@ -69,8 +76,9 @@ configurations {
     compile 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     //developmentOnly 'org.springframework.boot:spring-boot-devtools'
-
-
-
 }
 
+
+test {
+    useJUnitPlatform()
+}
