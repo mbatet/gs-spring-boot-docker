@@ -2,18 +2,18 @@
 
 ## Spring boot + Docker (Java 13)
 
-Demo gradle project with spring boot + Docker + Java 13 + Alpine distr
+Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 
 ## Basic application content
 
 * A Dockerfile
-* spring boot application
-* lombok for getters and setters
-* added the basic MVC pattern with a controller and a service layer: CustomerController, CustomerService ...
-* added basic spring data jpa functionalities  (h2 database + model entities + repository + saving and retrieving entities + dynamic query derivated from repository method names): Customer, CustomerRepository
-* logback
-* Test the rest controllers with junit tests using TestRestTemplate
-* Added basic thymeleaf template, tested teh controller with a @WebMvcTest test
+* A Spring boot application, with...
+	* lombok for the getters and setters
+	* added the basic MVC pattern with a controller and a service layer: CustomerController, CustomerService ...
+	* added basic spring data jpa functionalities  (h2 database + model entities + repository + saving and retrieving entities + dynamic query derivated from repository method names): Customer, CustomerRepository
+	* logback
+	* Test for the rest controllers with junit tests using TestRestTemplate
+	* Added basic thymeleaf template, tested teh controller with a @WebMvcTest test
 
 ## Roadmap
 
