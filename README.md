@@ -17,15 +17,15 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 
 ## Roadmap
 
-* Some views and forms with thymeleaf ... and form-bean mapping in the controller ... and validation and binding results ...
-* Spring security 
-* Cache
-* Scheduling some job
+* Add some views and forms with thymeleaf ... and form-bean mapping in the controller ... and validation and binding results ...
+* Add basic spring security config
+* Caching data (@Cache)
+* Add some scheduled job (@Schedule)
 * Development, preproduction and production  profiles
-* Utilitats bàsiques: @InitBinder, @ModelAttribute, Interception (HandlerMapping) ...
-* Utilitzar ~~RestTemplate~~ WebClient
-* Passar els test de TestRestTemplate a WebTestClient
-* Spring security with LDAP & CAS integration
+* Basic webapp functionalities: @InitBinder, @ModelAttribute, Interception (HandlerMapping) ...
+* Use ~~RestTemplate~~ WebClient for accesing rest services
+* Migrate TestRestTemplate to WebTestClient 
+* Add more complex auth with Spring security with LDAP & CAS integration
 
 ## backlog / wish list
 
