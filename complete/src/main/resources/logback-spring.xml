@@ -45,6 +45,11 @@
     </logger>
 
 
+    <logger name="org.springframework">
+        <level value="debug" />
+    </logger>
+
+
     <logger name="hello.controller">
         <level value="info" />
     </logger>

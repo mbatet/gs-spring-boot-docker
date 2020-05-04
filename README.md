@@ -12,16 +12,17 @@ Demo gradle project with spring boot + Docker + Java 13 + Alpine distr
 * added the basic MVC pattern with a controller and a service layer: CustomerController, CustomerService ...
 * added basic spring data jpa functionalities  (h2 database + model entities + repository + saving and retrieving entities + dynamic query derivated from repository method names): Customer, CustomerRepository
 * logback
-* Test controllers with junit tests using TestRestTemplate
+* Test the rest controllers with junit tests using TestRestTemplate
+* Added basic thymeleaf template, tested teh controller with a @WebMvcTest test
 
 ## Roadmap
 
-* Some views and forms ... and form-bean mapping in the controller ... and validation and binding results ...
+* Some views and forms with thymeleaf ... and form-bean mapping in the controller ... and validation and binding results ...
 * Spring security 
 * Cache
 * Scheduling some job
 * Development, preproduction and production  profiles
-* @InitBinder, @ModelAttribute  ..
+* Utilitats bàsiques: @InitBinder, @ModelAttribute, Interception (HandlerMapping) ...
 * Utilitzar ~~RestTemplate~~ WebClient
 * Passar els test de TestRestTemplate a WebTestClient
 * Spring security with LDAP & CAS integration
@@ -30,8 +31,8 @@ Demo gradle project with spring boot + Docker + Java 13 + Alpine distr
 
 * A controller to manage the REST API to save and retrieve entities (marshalling, unmarshalling, jackson annotations, jackson json views ...)
 * testing
+* thymeleaf templates for the shared parts (headers, menu...) and add css styling and js static files
 * retrieve actuator data
-* thymeleaf integration
 * spring data REST: makes it easy to build hypermedia-driven REST web services on top of Spring Data repositories
 * add additional spring data goodies: pagination, sorting, query by example, support for transparent auditing (created, last changed)...
 * spring cloud bus (to make a distributed system)
