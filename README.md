@@ -46,5 +46,5 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 
 ## Credits
 
-[matet@gmail.com] (mailto:matet@gmail.com)
+matet@gmail.com
 
