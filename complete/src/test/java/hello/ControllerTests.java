@@ -146,7 +146,7 @@ public class ControllerTests {
 
 		log.info("==============> books.size(): " + books.size());
 
-		assertTrue(books.size()==sizeBefore+1 );
+		assertTrue(books.size()==sizeBefore+1 ); 
 
 	}
 
