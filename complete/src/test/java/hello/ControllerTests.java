@@ -95,17 +95,6 @@ public class ControllerTests {
 		adminService.deleteData(); //Per si de cas, per no tenir problemes insertant
 		adminService.insertData(); //Per posar unes cuantes dades a recuperar
 
-
-		//Comprovem que podem recuperar un llibre
-		ResponseEntity<Book> bookResponse = restTemplate.getForEntity("http://localhost:" + this.port + "/books/11", Book.class);
-		log.info("bookResponse" + bookResponse);
-		assertEquals(HttpStatus.OK, bookResponse.getStatusCode());
-
-
-		Book book = bookResponse.getBody();
-		assertEquals(book.getId(), Long.valueOf(11));
-
-
 		//Comprovem que podem recuperar un llistat de llibres
 		ResponseEntity<List> listBooksResponse = restTemplate.getForEntity("http://localhost:" + this.port + "/books/", List.class);
 		assertEquals(HttpStatus.OK, listBooksResponse.getStatusCode());
@@ -117,6 +106,14 @@ public class ControllerTests {
 		log.info("listBooks.size(): " +sizeBefore);
 
 
+		//Comprovem que podem recuperar un llibre determinat
+		ResponseEntity<Book> bookResponse = restTemplate.getForEntity("http://localhost:" + this.port + "/books/11", Book.class);
+		log.info("bookResponse" + bookResponse);
+		assertEquals(HttpStatus.OK, bookResponse.getStatusCode());
+
+		Book book = bookResponse.getBody();
+		assertEquals(book.getId(), Long.valueOf(11));
+
 		//Comprovem que podem recuperar un llistat de llibres per genere
 		ResponseEntity<List> listBooksResponseByGenre = restTemplate.getForEntity("http://localhost:" + this.port + "/books/genre/Scy-fi", List.class);
 		assertEquals(HttpStatus.OK, listBooksResponseByGenre.getStatusCode());
@@ -126,23 +123,15 @@ public class ControllerTests {
 		assertTrue(listBooksByGenre.size()>1);
 
 
+		//Comprovemq ue podem crear un nou llibre via PUT
 		Optional<Genre> genre = genreRepository.findByName("Adventure");
 		Book newBook = new Book("The Lion, the Witch and the Wardrobe","12345800", genre.get());
 
-		log.info("==============> newBook: " + newBook);
-
-
-
+		//log.info("==============> newBook: " + newBook);
 		restTemplate.put("http://localhost:" + this.port + "/books/", newBook);
 
-		//HttpHeaders headers = new HttpHeaders();
-		//HttpEntity<Book> requestEntity = new HttpEntity<Book>(newBook, headers);
-		//ResponseEntity<Book> persistedBookResponse = restTemplate.exchange("http://localhost:" + this.port + "/books/", HttpMethod.PUT, requestEntity, Book.class);
-
-
-		Iterable<Book> iterator = bookRepository.findAll();
 		List<Book> books = new ArrayList<Book>();
-		iterator.forEach(books::add);
+		(bookRepository.findAll()).forEach(books::add);
 
 		log.info("==============> books.size(): " + books.size());
 
