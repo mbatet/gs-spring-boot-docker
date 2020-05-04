@@ -17,11 +17,14 @@ Demo gradle project with spring boot + Docker + Java 13 + Alpine distr
 ## Roadmap
 
 * Some views and forms ... and form-bean mapping in the controller ... and validation and binding results ...
+* Spring security 
 * Cache
 * Scheduling some job
 * Development, preproduction and production  profiles
-* Spring security with LDAP & CAS integration
 * @InitBinder, @ModelAttribute  ..
+* Utilitzar ~~RestTemplate~~ WebClient
+* Passar els test de TestRestTemplate a WebTestClient
+* Spring security with LDAP & CAS integration
 
 ## backlog / wish list
 

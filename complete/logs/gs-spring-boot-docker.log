@@ -3937,3 +3937,924 @@ List of constraint violations:[
 2020-05-03 14:36:43,514 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-05-03 14:36:43,516 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-05-03 14:36:43,522 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2020-05-03 16:41:11,722 INFO org.springframework.boot.StartupInfoLogger [Test worker] Starting ControllerTests on Ubuntu18-4-LTR with PID 22188 (started by user1 in /home/user1/gitprojects/gs-spring-boot-docker/complete)
+2020-05-03 16:41:11,727 DEBUG org.springframework.boot.StartupInfoLogger [Test worker] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-05-03 16:41:11,728 INFO org.springframework.boot.SpringApplication [Test worker] No active profile set, falling back to default profiles: default
+2020-05-03 16:41:12,271 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-03 16:41:12,347 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 58ms. Found 3 repository interfaces.
+2020-05-03 16:41:12,939 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [Test worker] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-03 16:41:13,356 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat initialized with port(s): 0 (http)
+2020-05-03 16:41:13,370 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:41:13,371 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting service [Tomcat]
+2020-05-03 16:41:13,372 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-05-03 16:41:13,490 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing Spring embedded WebApplicationContext
+2020-05-03 16:41:13,491 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [Test worker] Root WebApplicationContext: initialization completed in 1742 ms
+2020-05-03 16:41:13,620 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2020-05-03 16:41:13,832 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 16:41:13,928 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate Core {5.4.8.Final}
+2020-05-03 16:41:14,129 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [Test worker] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 16:41:14,328 INFO org.hibernate.dialect.Dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-03 16:41:15,090 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 16:41:15,097 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:41:15,761 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 16:41:16,062 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:41:16,406 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:41:16,434 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat started on port(s): 35399 (http) with context path ''
+2020-05-03 16:41:16,440 INFO org.springframework.boot.StartupInfoLogger [Test worker] Started ControllerTests in 5.237 seconds (JVM running for 6.458)
+2020-05-03 16:41:16,761 INFO org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 16:41:16,763 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-05-03 16:41:16,788 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Completed initialization in 24 ms
+2020-05-03 16:41:16,814 INFO hello.Application [http-nio-auto-1-exec-1] [m:home] =============> greeting: Hello Docker World.  System.getProperty("java.version") is....: 13.0.2
+2020-05-03 16:41:17,099 INFO hello.controller.BookController [http-nio-auto-1-exec-2] [m:get] BUsquem llibre 11
+2020-05-03 16:41:17,121 INFO hello.controller.BookController [http-nio-auto-1-exec-2] [m:get] Hem trobat Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}}
+2020-05-03 16:41:17,162 INFO hello.ControllerTests [Test worker] bookResponse<200,Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 03 May 2020 14:41:16 GMT"]>
+2020-05-03 16:41:17,189 INFO hello.ControllerTests [Test worker] listBooks[{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:41:17,190 INFO hello.ControllerTests [Test worker] listBooks.size(): 15
+2020-05-03 16:41:17,213 INFO hello.ControllerTests [Test worker] listBooksByGenre: [{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:41:17,244 INFO hello.ControllerTests [Test worker] ==============> newBook: Book{id=null, name='The Lion, the Witch and the Wardrobe', isbn='12345800', genre=Genre{id=7, name='Adventure'}}
+2020-05-03 16:41:17,256 INFO hello.controller.BookController [http-nio-auto-1-exec-5] [m:put] ===================> PERSISTIM NOU LLIBRE: Book{id=null, name='null', isbn='null', genre=null}
+2020-05-03 16:41:17,285 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction] with root cause
+javax.validation.ConstraintViolationException: Validation failed for classes [hello.model.Book] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=isbn, rootBeanClass=class hello.model.Book, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=name, rootBeanClass=class hello.model.Book, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
+	at org.hibernate.action.internal.EntityInsertAction.preInsert(EntityInsertAction.java:211)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:349)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:108)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1344)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:435)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3221)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2389)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:744)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:712)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:631)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at hello.controller.BookController$$EnhancerBySpringCGLIB$$a8768f12.put(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2020-05-03 16:41:17,323 INFO hello.ControllerTests [Test worker] ==============> books.size(): 15
+2020-05-03 16:41:17,333 INFO hello.controller.AdminController [http-nio-auto-1-exec-6] [m:retrieveData] =============> El log funciona!!!! <=============
+2020-05-03 16:41:17,399 INFO hello.controller.AdminController [http-nio-auto-1-exec-7] [m:insertData] =============> El log funciona!!!! <=============
+2020-05-03 16:41:17,500 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:41:17,503 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:41:17,506 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2020-05-03 16:41:49,378 INFO org.springframework.boot.StartupInfoLogger [Test worker] Starting ControllerTests on Ubuntu18-4-LTR with PID 22270 (started by user1 in /home/user1/gitprojects/gs-spring-boot-docker/complete)
+2020-05-03 16:41:49,382 DEBUG org.springframework.boot.StartupInfoLogger [Test worker] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-05-03 16:41:49,386 INFO org.springframework.boot.SpringApplication [Test worker] No active profile set, falling back to default profiles: default
+2020-05-03 16:41:49,921 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-03 16:41:49,982 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 50ms. Found 3 repository interfaces.
+2020-05-03 16:41:50,521 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [Test worker] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-03 16:41:50,920 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat initialized with port(s): 0 (http)
+2020-05-03 16:41:50,940 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:41:50,942 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting service [Tomcat]
+2020-05-03 16:41:50,943 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-05-03 16:41:51,070 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing Spring embedded WebApplicationContext
+2020-05-03 16:41:51,071 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [Test worker] Root WebApplicationContext: initialization completed in 1641 ms
+2020-05-03 16:41:51,204 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2020-05-03 16:41:51,413 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 16:41:51,477 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate Core {5.4.8.Final}
+2020-05-03 16:41:51,605 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [Test worker] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 16:41:51,755 INFO org.hibernate.dialect.Dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-03 16:41:52,536 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 16:41:52,544 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:41:53,210 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 16:41:53,447 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:41:53,792 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:41:53,828 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat started on port(s): 34091 (http) with context path ''
+2020-05-03 16:41:53,832 INFO org.springframework.boot.StartupInfoLogger [Test worker] Started ControllerTests in 4.872 seconds (JVM running for 5.743)
+2020-05-03 16:41:54,088 INFO org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 16:41:54,089 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-05-03 16:41:54,109 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Completed initialization in 19 ms
+2020-05-03 16:41:54,133 INFO hello.Application [http-nio-auto-1-exec-1] [m:home] =============> greeting: Hello Docker World.  System.getProperty("java.version") is....: 13.0.2
+2020-05-03 16:41:54,418 INFO hello.controller.BookController [http-nio-auto-1-exec-2] [m:get] BUsquem llibre 11
+2020-05-03 16:41:54,442 INFO hello.controller.BookController [http-nio-auto-1-exec-2] [m:get] Hem trobat Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}}
+2020-05-03 16:41:54,486 INFO hello.ControllerTests [Test worker] bookResponse<200,Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 03 May 2020 14:41:54 GMT"]>
+2020-05-03 16:41:54,520 INFO hello.ControllerTests [Test worker] listBooks[{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:41:54,521 INFO hello.ControllerTests [Test worker] listBooks.size(): 15
+2020-05-03 16:41:54,543 INFO hello.ControllerTests [Test worker] listBooksByGenre: [{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:41:54,568 INFO hello.ControllerTests [Test worker] ==============> newBook: Book{id=null, name='The Lion, the Witch and the Wardrobe', isbn='12345800', genre=Genre{id=7, name='Adventure'}}
+2020-05-03 16:41:54,579 INFO hello.controller.BookController [http-nio-auto-1-exec-5] [m:put] ===================> PERSISTIM NOU LLIBRE: Book{id=null, name='null', isbn='null', genre=null}
+2020-05-03 16:41:54,610 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction] with root cause
+javax.validation.ConstraintViolationException: Validation failed for classes [hello.model.Book] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=isbn, rootBeanClass=class hello.model.Book, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=name, rootBeanClass=class hello.model.Book, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
+	at org.hibernate.action.internal.EntityInsertAction.preInsert(EntityInsertAction.java:211)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:349)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:108)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1344)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:435)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3221)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2389)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:744)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:712)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:631)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at hello.controller.BookController$$EnhancerBySpringCGLIB$$a8768f12.put(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2020-05-03 16:41:54,636 INFO hello.ControllerTests [Test worker] ==============> books.size(): 15
+2020-05-03 16:41:54,651 INFO hello.controller.AdminController [http-nio-auto-1-exec-6] [m:retrieveData] =============> El log funciona!!!! <=============
+2020-05-03 16:41:54,721 INFO hello.controller.AdminController [http-nio-auto-1-exec-7] [m:insertData] =============> El log funciona!!!! <=============
+2020-05-03 16:41:54,779 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:41:54,781 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:41:54,783 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2020-05-03 16:42:09,190 INFO org.springframework.boot.StartupInfoLogger [Test worker] Starting ControllerTests on Ubuntu18-4-LTR with PID 22349 (started by user1 in /home/user1/gitprojects/gs-spring-boot-docker/complete)
+2020-05-03 16:42:09,192 DEBUG org.springframework.boot.StartupInfoLogger [Test worker] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-05-03 16:42:09,193 INFO org.springframework.boot.SpringApplication [Test worker] No active profile set, falling back to default profiles: default
+2020-05-03 16:42:09,714 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-03 16:42:09,769 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 47ms. Found 3 repository interfaces.
+2020-05-03 16:42:10,387 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [Test worker] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-03 16:42:10,754 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat initialized with port(s): 0 (http)
+2020-05-03 16:42:10,766 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:42:10,767 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting service [Tomcat]
+2020-05-03 16:42:10,768 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-05-03 16:42:10,881 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing Spring embedded WebApplicationContext
+2020-05-03 16:42:10,883 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [Test worker] Root WebApplicationContext: initialization completed in 1661 ms
+2020-05-03 16:42:11,054 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2020-05-03 16:42:11,251 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 16:42:11,315 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate Core {5.4.8.Final}
+2020-05-03 16:42:11,452 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [Test worker] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 16:42:11,622 INFO org.hibernate.dialect.Dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-03 16:42:12,447 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 16:42:12,453 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:42:13,073 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 16:42:13,325 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:42:13,669 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:42:13,695 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat started on port(s): 44887 (http) with context path ''
+2020-05-03 16:42:13,699 INFO org.springframework.boot.StartupInfoLogger [Test worker] Started ControllerTests in 5.115 seconds (JVM running for 6.084)
+2020-05-03 16:42:13,957 INFO org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 16:42:13,959 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-05-03 16:42:13,988 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Completed initialization in 28 ms
+2020-05-03 16:42:14,016 INFO hello.Application [http-nio-auto-1-exec-1] [m:home] =============> greeting: Hello Docker World.  System.getProperty("java.version") is....: 13.0.2
+2020-05-03 16:42:14,336 INFO hello.controller.BookController [http-nio-auto-1-exec-2] [m:get] BUsquem llibre 11
+2020-05-03 16:42:14,374 INFO hello.controller.BookController [http-nio-auto-1-exec-2] [m:get] Hem trobat Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}}
+2020-05-03 16:42:14,412 INFO hello.ControllerTests [Test worker] bookResponse<200,Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 03 May 2020 14:42:14 GMT"]>
+2020-05-03 16:42:14,472 INFO hello.ControllerTests [Test worker] listBooks[{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:42:14,478 INFO hello.ControllerTests [Test worker] listBooks.size(): 15
+2020-05-03 16:42:14,526 INFO hello.ControllerTests [Test worker] listBooksByGenre: [{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:42:14,572 INFO hello.ControllerTests [Test worker] ==============> newBook: Book{id=null, name='The Lion, the Witch and the Wardrobe', isbn='12345800', genre=Genre{id=7, name='Adventure'}}
+2020-05-03 16:42:14,588 INFO hello.controller.BookController [http-nio-auto-1-exec-5] [m:put] ===================> PERSISTIM NOU LLIBRE: Book{id=null, name='null', isbn='null', genre=null}
+2020-05-03 16:42:14,623 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction] with root cause
+javax.validation.ConstraintViolationException: Validation failed for classes [hello.model.Book] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=isbn, rootBeanClass=class hello.model.Book, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=name, rootBeanClass=class hello.model.Book, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
+	at org.hibernate.action.internal.EntityInsertAction.preInsert(EntityInsertAction.java:211)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:349)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:108)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1344)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:435)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3221)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2389)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:744)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:712)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:631)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at hello.controller.BookController$$EnhancerBySpringCGLIB$$ed5b8db3.put(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2020-05-03 16:42:14,668 INFO hello.ControllerTests [Test worker] ==============> books.size(): 15
+2020-05-03 16:42:14,686 INFO hello.controller.AdminController [http-nio-auto-1-exec-6] [m:retrieveData] =============> El log funciona!!!! <=============
+2020-05-03 16:42:14,776 INFO hello.controller.AdminController [http-nio-auto-1-exec-7] [m:insertData] =============> El log funciona!!!! <=============
+2020-05-03 16:42:14,916 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:42:14,919 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:42:14,922 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2020-05-03 16:42:40,877 INFO org.springframework.boot.StartupInfoLogger [Test worker] Starting ControllerTests on Ubuntu18-4-LTR with PID 22437 (started by user1 in /home/user1/gitprojects/gs-spring-boot-docker/complete)
+2020-05-03 16:42:40,880 DEBUG org.springframework.boot.StartupInfoLogger [Test worker] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-05-03 16:42:40,881 INFO org.springframework.boot.SpringApplication [Test worker] No active profile set, falling back to default profiles: default
+2020-05-03 16:42:41,368 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-03 16:42:41,432 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 55ms. Found 3 repository interfaces.
+2020-05-03 16:42:41,942 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [Test worker] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-03 16:42:42,278 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat initialized with port(s): 0 (http)
+2020-05-03 16:42:42,290 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:42:42,291 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting service [Tomcat]
+2020-05-03 16:42:42,291 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-05-03 16:42:42,398 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing Spring embedded WebApplicationContext
+2020-05-03 16:42:42,399 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [Test worker] Root WebApplicationContext: initialization completed in 1485 ms
+2020-05-03 16:42:42,529 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2020-05-03 16:42:42,718 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 16:42:42,792 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate Core {5.4.8.Final}
+2020-05-03 16:42:42,933 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [Test worker] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 16:42:43,093 INFO org.hibernate.dialect.Dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-03 16:42:43,862 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 16:42:43,869 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:42:44,435 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 16:42:44,655 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:42:44,992 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:42:45,011 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat started on port(s): 33475 (http) with context path ''
+2020-05-03 16:42:45,016 INFO org.springframework.boot.StartupInfoLogger [Test worker] Started ControllerTests in 4.675 seconds (JVM running for 5.715)
+2020-05-03 16:42:45,267 INFO org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 16:42:45,269 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-05-03 16:42:45,285 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Completed initialization in 16 ms
+2020-05-03 16:42:45,307 INFO hello.Application [http-nio-auto-1-exec-1] [m:home] =============> greeting: Hello Docker World.  System.getProperty("java.version") is....: 13.0.2
+2020-05-03 16:42:45,570 INFO hello.controller.BookController [http-nio-auto-1-exec-3] [m:get] BUsquem llibre 11
+2020-05-03 16:42:45,591 INFO hello.controller.BookController [http-nio-auto-1-exec-3] [m:get] Hem trobat Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}}
+2020-05-03 16:42:45,625 INFO hello.ControllerTests [Test worker] bookResponse<200,Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 03 May 2020 14:42:45 GMT"]>
+2020-05-03 16:42:45,655 INFO hello.ControllerTests [Test worker] listBooks[{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:42:45,656 INFO hello.ControllerTests [Test worker] listBooks.size(): 15
+2020-05-03 16:42:45,680 INFO hello.ControllerTests [Test worker] listBooksByGenre: [{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:42:45,708 INFO hello.ControllerTests [Test worker] ==============> newBook: Book{id=null, name='The Lion, the Witch and the Wardrobe', isbn='12345800', genre=Genre{id=7, name='Adventure'}}
+2020-05-03 16:42:45,721 INFO hello.controller.BookController [http-nio-auto-1-exec-2] [m:put] ===================> PERSISTIM NOU LLIBRE: Book{id=null, name='null', isbn='null', genre=null}
+2020-05-03 16:42:45,747 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction] with root cause
+javax.validation.ConstraintViolationException: Validation failed for classes [hello.model.Book] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=isbn, rootBeanClass=class hello.model.Book, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=name, rootBeanClass=class hello.model.Book, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
+	at org.hibernate.action.internal.EntityInsertAction.preInsert(EntityInsertAction.java:211)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:349)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:108)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1344)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:435)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3221)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2389)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:744)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:712)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:631)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at hello.controller.BookController$$EnhancerBySpringCGLIB$$b1974ad7.put(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2020-05-03 16:42:45,776 INFO hello.ControllerTests [Test worker] ==============> books.size(): 15
+2020-05-03 16:42:45,793 INFO hello.controller.AdminController [http-nio-auto-1-exec-6] [m:retrieveData] =============> El log funciona!!!! <=============
+2020-05-03 16:42:45,866 INFO hello.controller.AdminController [http-nio-auto-1-exec-8] [m:insertData] =============> El log funciona!!!! <=============
+2020-05-03 16:42:45,934 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:42:45,936 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:42:45,938 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2020-05-03 16:44:36,132 INFO org.springframework.boot.StartupInfoLogger [Test worker] Starting ControllerTests on Ubuntu18-4-LTR with PID 22678 (started by user1 in /home/user1/gitprojects/gs-spring-boot-docker/complete)
+2020-05-03 16:44:36,135 DEBUG org.springframework.boot.StartupInfoLogger [Test worker] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-05-03 16:44:36,137 INFO org.springframework.boot.SpringApplication [Test worker] No active profile set, falling back to default profiles: default
+2020-05-03 16:44:36,681 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-03 16:44:36,733 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 45ms. Found 3 repository interfaces.
+2020-05-03 16:44:37,288 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [Test worker] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-03 16:44:37,646 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat initialized with port(s): 0 (http)
+2020-05-03 16:44:37,657 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:44:37,658 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting service [Tomcat]
+2020-05-03 16:44:37,659 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-05-03 16:44:37,782 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing Spring embedded WebApplicationContext
+2020-05-03 16:44:37,783 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [Test worker] Root WebApplicationContext: initialization completed in 1621 ms
+2020-05-03 16:44:37,912 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2020-05-03 16:44:38,141 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 16:44:38,220 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate Core {5.4.8.Final}
+2020-05-03 16:44:38,370 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [Test worker] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 16:44:38,532 INFO org.hibernate.dialect.Dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-03 16:44:39,283 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 16:44:39,289 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:44:39,895 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 16:44:40,128 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:44:40,470 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:44:40,500 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat started on port(s): 38995 (http) with context path ''
+2020-05-03 16:44:40,505 INFO org.springframework.boot.StartupInfoLogger [Test worker] Started ControllerTests in 4.813 seconds (JVM running for 5.722)
+2020-05-03 16:44:40,804 INFO org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 16:44:40,806 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-05-03 16:44:40,831 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Completed initialization in 25 ms
+2020-05-03 16:44:40,856 INFO hello.Application [http-nio-auto-1-exec-1] [m:home] =============> greeting: Hello Docker World.  System.getProperty("java.version") is....: 13.0.2
+2020-05-03 16:44:41,143 INFO hello.controller.BookController [http-nio-auto-1-exec-2] [m:get] BUsquem llibre 11
+2020-05-03 16:44:41,172 INFO hello.controller.BookController [http-nio-auto-1-exec-2] [m:get] Hem trobat Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}}
+2020-05-03 16:44:41,210 INFO hello.ControllerTests [Test worker] bookResponse<200,Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 03 May 2020 14:44:40 GMT"]>
+2020-05-03 16:44:41,241 INFO hello.ControllerTests [Test worker] listBooks[{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:44:41,242 INFO hello.ControllerTests [Test worker] listBooks.size(): 15
+2020-05-03 16:44:41,268 INFO hello.ControllerTests [Test worker] listBooksByGenre: [{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:44:41,297 INFO hello.ControllerTests [Test worker] ==============> newBook: Book{id=null, name='The Lion, the Witch and the Wardrobe', isbn='12345800', genre=Genre{id=7, name='Adventure'}}
+2020-05-03 16:44:41,308 INFO hello.controller.BookController [http-nio-auto-1-exec-5] [m:post] ===================> PERSISTIM NOU LLIBRE: Book{id=null, name='null', isbn='null', genre=null}
+2020-05-03 16:44:41,335 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction] with root cause
+javax.validation.ConstraintViolationException: Validation failed for classes [hello.model.Book] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=name, rootBeanClass=class hello.model.Book, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=isbn, rootBeanClass=class hello.model.Book, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
+	at org.hibernate.action.internal.EntityInsertAction.preInsert(EntityInsertAction.java:211)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:349)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:108)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1344)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:435)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3221)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2389)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:744)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:712)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:631)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at hello.controller.BookController$$EnhancerBySpringCGLIB$$f47cb66b.post(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2020-05-03 16:44:41,363 INFO hello.ControllerTests [Test worker] ==============> books.size(): 15
+2020-05-03 16:44:41,375 INFO hello.controller.AdminController [http-nio-auto-1-exec-6] [m:retrieveData] =============> El log funciona!!!! <=============
+2020-05-03 16:44:41,433 INFO hello.controller.AdminController [http-nio-auto-1-exec-7] [m:insertData] =============> El log funciona!!!! <=============
+2020-05-03 16:44:41,511 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:44:41,513 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:44:41,515 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2020-05-03 16:44:51,891 INFO org.springframework.boot.StartupInfoLogger [Test worker] Starting ControllerTests on Ubuntu18-4-LTR with PID 22763 (started by user1 in /home/user1/gitprojects/gs-spring-boot-docker/complete)
+2020-05-03 16:44:51,894 DEBUG org.springframework.boot.StartupInfoLogger [Test worker] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-05-03 16:44:51,897 INFO org.springframework.boot.SpringApplication [Test worker] No active profile set, falling back to default profiles: default
+2020-05-03 16:44:52,610 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-03 16:44:52,680 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 60ms. Found 3 repository interfaces.
+2020-05-03 16:44:53,188 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [Test worker] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-03 16:44:53,526 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat initialized with port(s): 0 (http)
+2020-05-03 16:44:53,537 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:44:53,538 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting service [Tomcat]
+2020-05-03 16:44:53,538 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-05-03 16:44:53,656 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing Spring embedded WebApplicationContext
+2020-05-03 16:44:53,657 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [Test worker] Root WebApplicationContext: initialization completed in 1735 ms
+2020-05-03 16:44:53,791 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2020-05-03 16:44:53,963 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 16:44:54,036 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate Core {5.4.8.Final}
+2020-05-03 16:44:54,175 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [Test worker] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 16:44:54,331 INFO org.hibernate.dialect.Dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-03 16:44:55,117 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 16:44:55,124 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:44:55,770 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 16:44:56,010 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:44:56,352 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:44:56,376 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat started on port(s): 38463 (http) with context path ''
+2020-05-03 16:44:56,380 INFO org.springframework.boot.StartupInfoLogger [Test worker] Started ControllerTests in 4.978 seconds (JVM running for 6.087)
+2020-05-03 16:44:56,663 INFO org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 16:44:56,665 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-05-03 16:44:56,683 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Completed initialization in 17 ms
+2020-05-03 16:44:56,710 INFO hello.Application [http-nio-auto-1-exec-1] [m:home] =============> greeting: Hello Docker World.  System.getProperty("java.version") is....: 13.0.2
+2020-05-03 16:44:57,016 INFO hello.controller.BookController [http-nio-auto-1-exec-2] [m:get] BUsquem llibre 11
+2020-05-03 16:44:57,042 INFO hello.controller.BookController [http-nio-auto-1-exec-2] [m:get] Hem trobat Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}}
+2020-05-03 16:44:57,081 INFO hello.ControllerTests [Test worker] bookResponse<200,Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 03 May 2020 14:44:56 GMT"]>
+2020-05-03 16:44:57,106 INFO hello.ControllerTests [Test worker] listBooks[{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:44:57,107 INFO hello.ControllerTests [Test worker] listBooks.size(): 15
+2020-05-03 16:44:57,135 INFO hello.ControllerTests [Test worker] listBooksByGenre: [{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:44:57,171 INFO hello.ControllerTests [Test worker] ==============> newBook: Book{id=null, name='The Lion, the Witch and the Wardrobe', isbn='12345800', genre=Genre{id=7, name='Adventure'}}
+2020-05-03 16:44:57,183 INFO hello.controller.BookController [http-nio-auto-1-exec-5] [m:post] ===================> PERSISTIM NOU LLIBRE: Book{id=null, name='null', isbn='null', genre=null}
+2020-05-03 16:44:57,223 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction] with root cause
+javax.validation.ConstraintViolationException: Validation failed for classes [hello.model.Book] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=name, rootBeanClass=class hello.model.Book, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=isbn, rootBeanClass=class hello.model.Book, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
+	at org.hibernate.action.internal.EntityInsertAction.preInsert(EntityInsertAction.java:211)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:349)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:108)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1344)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:435)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3221)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2389)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:744)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:712)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:631)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at hello.controller.BookController$$EnhancerBySpringCGLIB$$ca378d25.post(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2020-05-03 16:44:57,292 INFO hello.ControllerTests [Test worker] ==============> books.size(): 15
+2020-05-03 16:44:57,322 INFO hello.controller.AdminController [http-nio-auto-1-exec-6] [m:retrieveData] =============> El log funciona!!!! <=============
+2020-05-03 16:44:57,391 INFO hello.controller.AdminController [http-nio-auto-1-exec-7] [m:insertData] =============> El log funciona!!!! <=============
+2020-05-03 16:44:57,452 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:44:57,454 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:44:57,456 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2020-05-03 16:47:43,098 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on Ubuntu18-4-LTR with PID 22887 (/home/user1/gitprojects/gs-spring-boot-docker/complete/build/classes/java/main started by user1 in /home/user1/gitprojects/gs-spring-boot-docker/complete)
+2020-05-03 16:47:43,101 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-05-03 16:47:43,102 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-05-03 16:47:43,510 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-03 16:47:43,567 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 46ms. Found 3 repository interfaces.
+2020-05-03 16:47:43,984 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-03 16:47:44,204 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-05-03 16:47:44,212 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-05-03 16:47:44,212 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-05-03 16:47:44,213 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-05-03 16:47:44,299 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-05-03 16:47:44,299 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1151 ms
+2020-05-03 16:47:44,364 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [main] Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2020-05-03 16:47:44,505 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 16:47:44,561 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.4.8.Final}
+2020-05-03 16:47:44,686 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 16:47:44,813 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-03 16:47:45,458 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 16:47:45,464 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:47:45,892 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 16:47:45,982 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:47:46,136 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-05-03 16:47:46,156 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-03 16:47:46,159 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 3.449 seconds (JVM running for 3.784)
+2020-05-03 16:48:21,609 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:48:21,612 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:48:21,615 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [SpringContextShutdownHook] Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2020-05-03 16:48:52,504 INFO org.springframework.boot.StartupInfoLogger [Test worker] Starting ControllerTests on Ubuntu18-4-LTR with PID 23100 (started by user1 in /home/user1/gitprojects/gs-spring-boot-docker/complete)
+2020-05-03 16:48:52,507 DEBUG org.springframework.boot.StartupInfoLogger [Test worker] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-05-03 16:48:52,509 INFO org.springframework.boot.SpringApplication [Test worker] No active profile set, falling back to default profiles: default
+2020-05-03 16:48:52,986 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-03 16:48:53,058 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 60ms. Found 3 repository interfaces.
+2020-05-03 16:48:53,699 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [Test worker] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-03 16:48:54,059 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat initialized with port(s): 0 (http)
+2020-05-03 16:48:54,069 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:48:54,070 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting service [Tomcat]
+2020-05-03 16:48:54,071 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-05-03 16:48:54,174 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing Spring embedded WebApplicationContext
+2020-05-03 16:48:54,175 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [Test worker] Root WebApplicationContext: initialization completed in 1635 ms
+2020-05-03 16:48:54,301 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2020-05-03 16:48:54,514 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 16:48:54,584 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate Core {5.4.8.Final}
+2020-05-03 16:48:54,727 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [Test worker] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 16:48:54,885 INFO org.hibernate.dialect.Dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-03 16:48:55,670 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 16:48:55,680 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:48:56,284 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 16:48:56,517 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:48:56,879 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:48:56,905 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat started on port(s): 38133 (http) with context path ''
+2020-05-03 16:48:56,910 INFO org.springframework.boot.StartupInfoLogger [Test worker] Started ControllerTests in 4.807 seconds (JVM running for 5.702)
+2020-05-03 16:48:57,176 INFO org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 16:48:57,178 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-05-03 16:48:57,197 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Completed initialization in 18 ms
+2020-05-03 16:48:57,222 INFO hello.Application [http-nio-auto-1-exec-1] [m:home] =============> greeting: Hello Docker World.  System.getProperty("java.version") is....: 13.0.2
+2020-05-03 16:48:57,515 INFO hello.controller.BookController [http-nio-auto-1-exec-3] [m:get] BUsquem llibre 11
+2020-05-03 16:48:57,537 INFO hello.controller.BookController [http-nio-auto-1-exec-3] [m:get] Hem trobat Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}}
+2020-05-03 16:48:57,568 INFO hello.ControllerTests [Test worker] bookResponse<200,Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 03 May 2020 14:48:57 GMT"]>
+2020-05-03 16:48:57,594 INFO hello.ControllerTests [Test worker] listBooks[{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:48:57,595 INFO hello.ControllerTests [Test worker] listBooks.size(): 15
+2020-05-03 16:48:57,618 INFO hello.ControllerTests [Test worker] listBooksByGenre: [{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:48:57,650 INFO hello.ControllerTests [Test worker] ==============> newBook: Book{id=null, name='The Lion, the Witch and the Wardrobe', isbn='12345800', genre=Genre{id=7, name='Adventure'}}
+2020-05-03 16:48:57,660 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-auto-1-exec-5] Resolved [org.springframework.web.bind.ServletRequestBindingException: Missing request attribute 'book' of type Book]
+2020-05-03 16:48:57,687 INFO hello.ControllerTests [Test worker] ==============> books.size(): 15
+2020-05-03 16:48:57,697 INFO hello.controller.AdminController [http-nio-auto-1-exec-6] [m:retrieveData] =============> El log funciona!!!! <=============
+2020-05-03 16:48:57,762 INFO hello.controller.AdminController [http-nio-auto-1-exec-7] [m:insertData] =============> El log funciona!!!! <=============
+2020-05-03 16:48:57,820 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:48:57,823 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:48:57,825 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2020-05-03 16:49:33,125 INFO org.springframework.boot.StartupInfoLogger [Test worker] Starting ControllerTests on Ubuntu18-4-LTR with PID 23195 (started by user1 in /home/user1/gitprojects/gs-spring-boot-docker/complete)
+2020-05-03 16:49:33,129 DEBUG org.springframework.boot.StartupInfoLogger [Test worker] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-05-03 16:49:33,130 INFO org.springframework.boot.SpringApplication [Test worker] No active profile set, falling back to default profiles: default
+2020-05-03 16:49:33,748 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-03 16:49:33,819 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 60ms. Found 3 repository interfaces.
+2020-05-03 16:49:34,303 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [Test worker] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-03 16:49:34,753 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat initialized with port(s): 0 (http)
+2020-05-03 16:49:34,773 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:49:34,775 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting service [Tomcat]
+2020-05-03 16:49:34,776 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-05-03 16:49:34,956 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing Spring embedded WebApplicationContext
+2020-05-03 16:49:34,957 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [Test worker] Root WebApplicationContext: initialization completed in 1804 ms
+2020-05-03 16:49:35,119 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2020-05-03 16:49:35,301 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 16:49:35,367 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate Core {5.4.8.Final}
+2020-05-03 16:49:35,501 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [Test worker] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 16:49:35,680 INFO org.hibernate.dialect.Dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-03 16:49:36,447 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 16:49:36,453 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:49:37,023 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 16:49:37,252 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:49:37,592 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:49:37,623 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat started on port(s): 38237 (http) with context path ''
+2020-05-03 16:49:37,628 INFO org.springframework.boot.StartupInfoLogger [Test worker] Started ControllerTests in 4.93 seconds (JVM running for 5.835)
+2020-05-03 16:49:37,886 INFO org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 16:49:37,888 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-05-03 16:49:37,920 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Completed initialization in 32 ms
+2020-05-03 16:49:37,945 INFO hello.Application [http-nio-auto-1-exec-1] [m:home] =============> greeting: Hello Docker World.  System.getProperty("java.version") is....: 13.0.2
+2020-05-03 16:49:38,260 INFO hello.controller.BookController [http-nio-auto-1-exec-3] [m:get] BUsquem llibre 11
+2020-05-03 16:49:38,285 INFO hello.controller.BookController [http-nio-auto-1-exec-3] [m:get] Hem trobat Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}}
+2020-05-03 16:49:38,318 INFO hello.ControllerTests [Test worker] bookResponse<200,Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 03 May 2020 14:49:37 GMT"]>
+2020-05-03 16:49:38,347 INFO hello.ControllerTests [Test worker] listBooks[{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:49:38,348 INFO hello.ControllerTests [Test worker] listBooks.size(): 15
+2020-05-03 16:49:38,370 INFO hello.ControllerTests [Test worker] listBooksByGenre: [{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:49:38,397 INFO hello.ControllerTests [Test worker] ==============> newBook: Book{id=null, name='The Lion, the Witch and the Wardrobe', isbn='12345800', genre=Genre{id=7, name='Adventure'}}
+2020-05-03 16:49:38,407 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-auto-1-exec-5] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required Book parameter 'book' is not present]
+2020-05-03 16:49:38,437 INFO hello.ControllerTests [Test worker] ==============> books.size(): 15
+2020-05-03 16:49:38,461 INFO hello.controller.AdminController [http-nio-auto-1-exec-6] [m:retrieveData] =============> El log funciona!!!! <=============
+2020-05-03 16:49:38,518 INFO hello.controller.AdminController [http-nio-auto-1-exec-7] [m:insertData] =============> El log funciona!!!! <=============
+2020-05-03 16:49:38,602 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:49:38,605 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:49:38,607 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2020-05-03 16:49:53,004 INFO org.springframework.boot.StartupInfoLogger [Test worker] Starting ControllerTests on Ubuntu18-4-LTR with PID 23278 (started by user1 in /home/user1/gitprojects/gs-spring-boot-docker/complete)
+2020-05-03 16:49:53,007 DEBUG org.springframework.boot.StartupInfoLogger [Test worker] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-05-03 16:49:53,009 INFO org.springframework.boot.SpringApplication [Test worker] No active profile set, falling back to default profiles: default
+2020-05-03 16:49:53,510 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-03 16:49:53,578 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 58ms. Found 3 repository interfaces.
+2020-05-03 16:49:54,107 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [Test worker] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-03 16:49:54,485 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat initialized with port(s): 0 (http)
+2020-05-03 16:49:54,496 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:49:54,497 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting service [Tomcat]
+2020-05-03 16:49:54,498 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-05-03 16:49:54,591 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Initializing Spring embedded WebApplicationContext
+2020-05-03 16:49:54,592 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [Test worker] Root WebApplicationContext: initialization completed in 1556 ms
+2020-05-03 16:49:54,704 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2020-05-03 16:49:54,867 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 16:49:54,938 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate Core {5.4.8.Final}
+2020-05-03 16:49:55,070 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [Test worker] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 16:49:55,209 INFO org.hibernate.dialect.Dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-03 16:49:55,949 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 16:49:55,956 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:49:56,572 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 16:49:56,802 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:49:57,124 INFO org.apache.juli.logging.DirectJDKLog [Test worker] Starting ProtocolHandler ["http-nio-auto-1"]
+2020-05-03 16:49:57,151 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [Test worker] Tomcat started on port(s): 33847 (http) with context path ''
+2020-05-03 16:49:57,156 INFO org.springframework.boot.StartupInfoLogger [Test worker] Started ControllerTests in 4.639 seconds (JVM running for 5.662)
+2020-05-03 16:49:57,422 INFO org.apache.juli.logging.DirectJDKLog [http-nio-auto-1-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 16:49:57,424 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-05-03 16:49:57,444 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-auto-1-exec-1] Completed initialization in 19 ms
+2020-05-03 16:49:57,470 INFO hello.Application [http-nio-auto-1-exec-1] [m:home] =============> greeting: Hello Docker World.  System.getProperty("java.version") is....: 13.0.2
+2020-05-03 16:49:57,760 INFO hello.controller.BookController [http-nio-auto-1-exec-3] [m:get] BUsquem llibre 11
+2020-05-03 16:49:57,784 INFO hello.controller.BookController [http-nio-auto-1-exec-3] [m:get] Hem trobat Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}}
+2020-05-03 16:49:57,823 INFO hello.ControllerTests [Test worker] bookResponse<200,Book{id=11, name='Foundation', isbn='1234562', genre=Genre{id=6, name='Scy-fi'}},[Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Sun, 03 May 2020 14:49:57 GMT"]>
+2020-05-03 16:49:57,859 INFO hello.ControllerTests [Test worker] listBooks[{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:49:57,861 INFO hello.ControllerTests [Test worker] listBooks.size(): 15
+2020-05-03 16:49:57,888 INFO hello.ControllerTests [Test worker] listBooksByGenre: [{id=10, name=Brave New World, isbn=1234561, genre={id=6, name=Scy-fi}}, {id=11, name=Foundation, isbn=1234562, genre={id=6, name=Scy-fi}}, {id=12, name=Starship Troopers, isbn=1234563, genre={id=6, name=Scy-fi}}, {id=13, name=Solaris, isbn=1234564, genre={id=6, name=Scy-fi}}, {id=14, name=Dune, isbn=1234565, genre={id=6, name=Scy-fi}}, {id=15, name=Do androids dream of electric sheep?, isbn=1234566, genre={id=6, name=Scy-fi}}, {id=16, name=Ringworld, isbn=1234567, genre={id=6, name=Scy-fi}}, {id=17, name=The left hand of darkness, isbn=1234568, genre={id=6, name=Scy-fi}}, {id=18, name=Rendezvous with Rama, isbn=1234569, genre={id=6, name=Scy-fi}}, {id=19, name=Enders's game, isbn=1234570, genre={id=6, name=Scy-fi}}, {id=20, name=Red mars, isbn=1234571, genre={id=6, name=Scy-fi}}, {id=21, name=The Martian Chronicles, isbn=1234572, genre={id=6, name=Scy-fi}}, {id=22, name=I, Robot, isbn=1234573, genre={id=6, name=Scy-fi}}, {id=23, name=Harry Potter and the philosopher stone, isbn=1234574, genre={id=7, name=Adventure}}, {id=24, name=The Lord Of The Rings, isbn=1234575, genre={id=7, name=Adventure}}]
+2020-05-03 16:49:57,918 INFO hello.ControllerTests [Test worker] ==============> newBook: Book{id=null, name='The Lion, the Witch and the Wardrobe', isbn='12345800', genre=Genre{id=7, name='Adventure'}}
+2020-05-03 16:49:57,931 INFO hello.controller.BookController [http-nio-auto-1-exec-5] [m:put] ===================> PERSISTIM NOU LLIBRE: Book{id=null, name='The Lion, the Witch and the Wardrobe', isbn='12345800', genre=Genre{id=7, name='Adventure'}}
+2020-05-03 16:49:57,947 INFO hello.ControllerTests [Test worker] ==============> books.size(): 16
+2020-05-03 16:49:57,961 INFO hello.controller.AdminController [http-nio-auto-1-exec-6] [m:retrieveData] =============> El log funciona!!!! <=============
+2020-05-03 16:49:58,029 INFO hello.controller.AdminController [http-nio-auto-1-exec-7] [m:insertData] =============> El log funciona!!!! <=============
+2020-05-03 16:49:58,105 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Test worker] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 16:49:58,107 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 16:49:58,109 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory [Test worker] Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
