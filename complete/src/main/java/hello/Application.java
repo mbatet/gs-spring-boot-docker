@@ -39,24 +39,31 @@ public class Application {
 
 		//Un cosa que es pot fer només desde Java 11,
 		// aixi ens assegurem que el host realment s'esta executant en un java superior a 8
-		var greeting = "Hello Docker World.  System.getProperty(\"java.version\") is....: " + System.getProperty("java.version");
 
 		log.info("[m:home] =============> greeting: " + greeting);
 
 		return greeting;
 	}*/
 
+	/*
+	* Provar:
+	* 	http://localhost:8080
+	* 	http://localhost:8080/greeting
+	* 	http://localhost:8080/greeting?name=marina
+	*
+	* */
 
-	//Provar: http://localhost:8080
-	//http://localhost:8080?name=marina
 
-	@GetMapping("/")
-	public String main(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+	@GetMapping("/greeting")
+	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+
+		var message = "Hello Docker World.  System.getProperty(\"java.version\") is....: " + System.getProperty("java.version");
+
 		model.addAttribute("name", name);
+		model.addAttribute("message", message);
+
 		return "greeting";
 	}
-
-
 
 
 }
