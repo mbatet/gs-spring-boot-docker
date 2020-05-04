@@ -1,6 +1,6 @@
 # gs-spring-boot-docker
 
-## Spring boot + Docker (Java 13)
+## Spring boot + Docker (JDK 13)
 
 Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 
@@ -42,4 +42,9 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 ## More info
 
 [See this file](Docker%20+%20Spring.pdf)
+
+
+## Credits
+
+//*|| matet@gmail.com //*//
 
