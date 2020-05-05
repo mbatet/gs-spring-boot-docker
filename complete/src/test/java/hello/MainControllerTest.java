@@ -14,11 +14,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 @ComponentScan(basePackages = {"hello"})
-//@EnableJpaRepositories(basePackages = "hello")
-//@EntityScan(basePackages = {"hello"})
-//@EnableTransactionManagement
-
-
 @WebMvcTest(controllers = MainController.class)
 public class MainControllerTest {
 

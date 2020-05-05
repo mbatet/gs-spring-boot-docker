@@ -27,12 +27,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 
-//@ActiveProfiles("test")
-@ComponentScan(basePackages = {"hello"})
-//@EnableJpaRepositories(basePackages = "hello")
-//@EntityScan(basePackages = {"hello"})
-//@EnableTransactionManagement
 
+@ComponentScan(basePackages = {"hello"})
 @WebMvcTest(controllers = BookController.class)
 public class BookControllerTest {
 
