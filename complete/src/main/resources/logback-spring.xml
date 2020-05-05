@@ -58,6 +58,12 @@
     <logger name="org.thymeleaf">
         <level value="warn" />
     </logger>
+    <logger name="javax.persistence">
+        <level value="info" />
+    </logger>
+    <logger name="org.hibernate">
+        <level value="info" />
+    </logger>
 
 
 </configuration>

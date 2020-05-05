@@ -15,10 +15,10 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 	* Basic @RestController to manage the REST API to save and retrieve entities
 	* Test for the rest controllers with junit tests using TestRestTemplate
 	* Added basic thymeleaf template and template fragments (use thymeleaf templates for the shared parts like headers, footer...), tested with a @WebMvcTest test
+	* Added some views and forms with thymeleaf ... and form-bean mapping in the controller ... and validation and binding results ...
 
 ## Roadmap
 
-* Add some views and forms with thymeleaf ... and form-bean mapping in the controller ... and validation and binding results ...
 * Get properties from the property file
 * Add basic spring security config
 * Caching data (@Cache)

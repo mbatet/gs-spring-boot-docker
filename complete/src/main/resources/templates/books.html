@@ -23,7 +23,7 @@
     <tr th:each="book: ${books}">
         <td th:text="${book.id}"/>
         <td>
-            <a th:href="@{'/book/' + ${book.id}}" th:text="${book.name}"></a>
+            <a th:href="@{'/books/' + ${book.id}}" th:text="${book.name}"></a>
         </td>
         <td>
             <a th:href="@{'/genre/' + ${book.genre.id}}" th:text="${book.genre.name}"></a>

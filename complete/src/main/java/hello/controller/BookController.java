@@ -2,8 +2,10 @@ package hello.controller;
 
 
 import hello.model.Book;
+import hello.model.Genre;
 import hello.repository.BookRepository;
 import hello.service.BookService;
+import hello.service.GenreService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +31,12 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
+    @Autowired
+    GenreService genreService;
+
     //http://localhost:8080/books/
-    @Transactional
-    @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model) {
 
         List<Book> books = bookService.findAll();
@@ -41,8 +46,7 @@ public class BookController {
 
 
     //http://localhost:8080/books/11
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    @Transactional
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String get(@PathVariable @NotNull Long id, Model model) {
 
         log.info("[m:get] Busquem llibre " + id);
@@ -50,11 +54,15 @@ public class BookController {
         log.info("[m:get] Hem trobat " + book);
         model.addAttribute("book", book);
 
+        //TODO: Això ha d'anar a un  @ModelAttribute i passar-ho per defecte semrpe al request sense tenir q nrecupewrar-hoc ada cop
+        List<Genre> genres = genreService.findAll();
+        model.addAttribute("genres", genres);
+
+
         return "book";
     }
 
-    @RequestMapping(value = "/genre/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    @Transactional
+    @RequestMapping(value = "/genre/{name}", method = RequestMethod.GET)
     public String findByGenre(@PathVariable @NotNull String name, Model model) {
         List<Book> books =  bookService.findByGenreName(name);
         model.addAttribute("books", books);
@@ -65,13 +73,18 @@ public class BookController {
     /*
      * En aquest cas, s'injecta el nou book com un json al requet body del PUT
      * */
-    @RequestMapping(value = "/", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
-    @Transactional
-    public String put(@RequestBody @NotNull Book book, BindingResult result, Model model) {
+    @RequestMapping(value = "/save", method = {RequestMethod.POST, RequestMethod.PUT})
+    //public String put(@RequestBody @NotNull Book book, BindingResult result, Model model) {
+    public String put(@ModelAttribute @NotNull Book book, BindingResult result, Model model) {
+        log.error("[m:put] ===================> result: " + result);
+        log.warn("[m:put] ===================> PERSISTIM NOU LLIBRE: " + book);
 
-        log.info("[m:put] ===================> PERSISTIM NOU LLIBRE: " + book);
+
         Book bookPersisted = bookService.save(book);
         model.addAttribute("book", book);
+
+        List<Genre> genres = genreService.findAll();
+        model.addAttribute("genres", genres);
 
         return "book";
     }
