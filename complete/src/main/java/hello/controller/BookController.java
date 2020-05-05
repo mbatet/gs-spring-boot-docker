@@ -44,6 +44,7 @@ public class BookController {
     public String index(Model model) {
 
         List<Book> books = bookService.findAll();
+        model.addAttribute("books", books);
         return "books";
     }
 
@@ -53,7 +54,7 @@ public class BookController {
     @Transactional
     public String get(@PathVariable @NotNull Long id, Model model) {
 
-        log.info("[m:get] BUsquem llibre " + id);
+        log.info("[m:get] Busquem llibre " + id);
         Book book = bookService.get(id);
         log.info("[m:get] Hem trobat " + book);
         model.addAttribute("book", book);

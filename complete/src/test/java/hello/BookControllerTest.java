@@ -16,6 +16,7 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import static org.hamcrest.Matchers.containsString;
@@ -50,9 +51,10 @@ public class BookControllerTest {
         adminService.deleteData(); //Per si de cas, per no tenir problemes insertant
         adminService.insertData(); //Per posar unes cuantes dades a recuperar
 
-        mockMvc.perform(get("/books/"))
-                .andExpect(content().string(containsString("Book list")));
-                //.andExpect(content().string(containsString("Brave New World")));
+        ResultActions result = mockMvc.perform(get("/books/"));
+
+        result.andExpect(content().string(containsString("Book list")))
+                .andExpect(content().string(containsString("Brave New World")));
     }
 
 
