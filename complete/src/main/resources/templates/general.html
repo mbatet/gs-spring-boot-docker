@@ -1,10 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="headerfiles">
+    <title>Thymeleaf Fragments: home</title>
+    <meta charset="UTF-8" />
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
 </head>
 <body>
-$END$
+<div th:fragment="header">
+    <h1>Welcome. This is the header: Thymeleaf Fragments sample</h1>
+</div>
+<p>Go to the next page to see fragments in action</p>
+<aside>
+    <div>This is a sidebar</div>
+</aside>
+<div class="another">This is another sidebar</div>
+<footer th:fragment="footer">
+    This is a footer
+    <a th:href="@{/fragments}">Fragments Index</a> |
+    <a th:href="@{/markup}">Markup inclussion</a> |
+    <a th:href="@{/params}">Fragment params</a> |
+    <a th:href="@{/other}">Other</a>
+
+</footer>
 </body>
 </html>

@@ -19,6 +19,7 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 ## Roadmap
 
 * Add some views and forms with thymeleaf ... and form-bean mapping in the controller ... and validation and binding results ...
+* Get properties from the property file
 * Add basic spring security config
 * Caching data (@Cache)
 * Add some scheduled job (@Schedule)
