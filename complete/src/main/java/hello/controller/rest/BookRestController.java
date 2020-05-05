@@ -2,7 +2,7 @@ package hello.controller.rest;
 
 
 import hello.model.Book;
-import hello.repository.BookRepository;
+import hello.service.BookService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,13 +20,13 @@ import java.util.List;
 @RequestMapping(value = "/rest/books")
 public class BookRestController {
 
-    //read "Field injection is not recommended – Spring IOC"
-    //https://blog.marcnuri.com/field-injection-is-not-recommended/
 
+    //@Autowired
+    //private BookRepository bookRepository;
 
-
+    //De cara a not enir que fer mocks del repository (o pq no ens sabem), millor services que repositoris...
     @Autowired
-    private BookRepository bookRepository;
+    private BookService bookService;
 
     private static final Logger log = LoggerFactory.getLogger(BookRestController.class);
 
@@ -36,10 +36,8 @@ public class BookRestController {
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Book> index() {
 
-        Iterable<Book> iterator = bookRepository.findAll();
 
-        List<Book> books = new ArrayList<Book>();
-        iterator.forEach(books::add);
+        List<Book> books = bookService.findAll();
 
         return books;
     }
@@ -51,7 +49,7 @@ public class BookRestController {
     public Book get(@PathVariable @NotNull Long id) {
         log.info("[m:get] BUsquem llibre " + id);
 
-        Book book = bookRepository.findById(id).get();
+        Book book = bookService.get(id);
 
         log.info("[m:get] Hem trobat " + book);
 
@@ -61,7 +59,7 @@ public class BookRestController {
     @RequestMapping(value = "/genre/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @Transactional
     public List<Book> findByGenre(@PathVariable @NotNull String name) {
-        return bookRepository.findByGenreName(name);
+        return bookService.findByGenreName(name);
 
     }
 
@@ -73,8 +71,7 @@ public class BookRestController {
     public Book put(@RequestBody @NotNull Book book, BindingResult result) {
 
         log.info("[m:put] ===================> PERSISTIM NOU LLIBRE: " + book);
-        Book bookPersisted = bookRepository.save(book);
-
+        Book bookPersisted = bookService.save(book);
         return bookPersisted;
     }
 

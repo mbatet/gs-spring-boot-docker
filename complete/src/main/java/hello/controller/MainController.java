@@ -10,24 +10,30 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/")
 public class MainController {
 
+
+    //https://github.com/spring-guides/gs-serving-web-content
+
+
+    //Si no posem el "/" per defecte, l'anira a buscar a static/index.html
+    @GetMapping("/")
+    public String home() {
+
+        return "index";
+    }
+
     @GetMapping("/greeting")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+
 
         var message = "Hello Docker World.  System.getProperty(\"java.version\") is....: " + System.getProperty("java.version");
 
         model.addAttribute("name", name);
         model.addAttribute("message", message);
 
-        //https://github.com/spring-guides/gs-serving-web-content
-
         return "greeting";
     }
 
 
 
-    @GetMapping("/")
-    public String home() {
 
-        return "index";
-    }
 }
