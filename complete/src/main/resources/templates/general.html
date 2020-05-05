@@ -7,7 +7,7 @@
 </head>
 <body>
 <div th:fragment="header">
-    <h1>Welcome. This is the header: Thymeleaf Fragments sample</h1>
+    <h1>Welcome. This is the header fragment</h1>
 </div>
 <p>Go to the next page to see fragments in action</p>
 <aside>
@@ -15,11 +15,13 @@
 </aside>
 <div class="another">This is another sidebar</div>
 <footer th:fragment="footer">
-    This is a footer
+    This is the footer fragment
     <a th:href="@{/}">Home</a> |
     <a th:href="@{/greeting}">Greeting</a> |
-    <a th:href="@{/books}">Books</a>
-    <a th:href="@{/genres}">Genre</a>
+    <a th:href="@{/rest/admin/insertData/}">Data</a>  |
+    <a th:href="@{/rest/books/}">Books</a>  |
+    <a th:href="@{/rest/genres/}">Genre</a>  |
+    <a th:href="@{/rest/customers/}">Customers</a>
 
 </footer>
 </body>
