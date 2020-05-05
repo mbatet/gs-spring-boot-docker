@@ -22,4 +22,12 @@ public class MainController {
 
         return "greeting";
     }
+
+
+
+    @GetMapping("/")
+    public String home() {
+
+        return "index";
+    }
 }
