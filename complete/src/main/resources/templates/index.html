@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
-<html>
-<head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
+<header th:insert="general.html :: headerfiles"> </header>
+
 <body>
 
-Welcome. This is the <b>resources/static/index.html</b> static html file. In this application you could see:
+
+<div th:replace="/general.html :: header"></div>
+
+This is the <b>resources/templates/index.html</b> template. In this application you could see:
 
 <h2>Web App</h2>
 <p>You can see a thymeleaf template <a href="/greeting">here</a></p>
@@ -23,9 +24,8 @@ Welcome. This is the <b>resources/static/index.html</b> static html file. In thi
 <p><a href="/books/genre/Scy-fi">books/genre/Scy-fi</a></p>
 <p><a href="/customers/">customers</a></p>
 <p><a href="/customers/1">customers/1</a></p>
+<p></p>
 
-
-
-
+<div th:replace="/general.html :: footer"></div>
 </body>
 </html>
