@@ -4,11 +4,13 @@ import hello.model.Book;
 import hello.model.Genre;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
 
 //https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference
+
 
 public interface BookRepository extends CrudRepository<Book, Long> {
 
