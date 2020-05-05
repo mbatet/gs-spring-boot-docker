@@ -58,4 +58,15 @@ public class BookControllerTest {
     }
 
 
+    @Test
+    public void getBook() throws Exception {
+
+
+        ResultActions result = mockMvc.perform(get("/books/11"));
+
+        result.andExpect(content().string(containsString("Book:")))
+                .andExpect(content().string(containsString("Foundation")));
+    }
+
+
 }

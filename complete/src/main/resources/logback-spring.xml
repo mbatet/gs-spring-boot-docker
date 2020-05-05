@@ -56,7 +56,7 @@
 
 
     <logger name="org.thymeleaf">
-        <level value="debug" />
+        <level value="warn" />
     </logger>
 
 

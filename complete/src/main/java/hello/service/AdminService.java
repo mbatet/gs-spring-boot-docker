@@ -14,13 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+//https://www.baeldung.com/spring-bean-scopes
 //valors possibles de scoped epenent del que volguem: singleton | prototype | request | session | application | websocket
 @Scope(value = "singleton")
 @Component(value = "adminService")
 public class AdminService {
-
-    //https://www.baeldung.com/jsf-spring-boot-controller-service-dao
-    //https://www.baeldung.com/spring-bean-scopes
 
 
     @Autowired

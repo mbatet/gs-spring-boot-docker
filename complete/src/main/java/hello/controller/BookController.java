@@ -23,20 +23,11 @@ import java.util.List;
 @RequestMapping(value = "/books")
 public class BookController {
 
-    //read "Field injection is not recommended – Spring IOC"
-    //https://blog.marcnuri.com/field-injection-is-not-recommended/
-
-
-
-
 
     private static final Logger log = LoggerFactory.getLogger(BookController.class);
 
-
     @Autowired
     private BookService bookService;
-
-
 
     //http://localhost:8080/books/
     @Transactional
@@ -64,7 +55,6 @@ public class BookController {
 
     @RequestMapping(value = "/genre/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @Transactional
-
     public String findByGenre(@PathVariable @NotNull String name, Model model) {
         List<Book> books =  bookService.findByGenreName(name);
         model.addAttribute("books", books);

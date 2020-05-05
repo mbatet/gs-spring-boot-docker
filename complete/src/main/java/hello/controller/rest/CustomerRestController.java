@@ -2,7 +2,7 @@ package hello.controller.rest;
 
 
 import hello.model.Customer;
-import hello.repository.CustomerRepository;
+import hello.service.CustomerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ import java.util.List;
 public class CustomerRestController {
 
     @Autowired
-    private CustomerRepository customerRepository;
+    private CustomerService customerService;
 
     private static final Logger log = LoggerFactory.getLogger(CustomerRestController.class);
 
@@ -28,22 +28,22 @@ public class CustomerRestController {
     @Transactional
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 
-    public Iterable<Customer> index() {
+    public List<Customer> index() {
 
-        return customerRepository.findAll();
+        return customerService.findAll();
     }
 
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @Transactional
     public Customer get(@PathVariable @NotNull Long id) {
-        return customerRepository.findById(id).get();
+        return customerService.get(id);
     }
 
     @RequestMapping(value = "/findByLastName/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @Transactional
     public List<Customer> findBy(@PathVariable @NotNull String name) {
-        return customerRepository.findByLastName(name);
+        return customerService.findByLastName(name);
     }
 
     /*
@@ -52,6 +52,6 @@ public class CustomerRestController {
     @RequestMapping(value = "/", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
     @Transactional
     public Customer put(@RequestBody @NotNull Customer costumer, BindingResult result) {
-        return customerRepository.save(costumer);
+        return customerService.save(costumer);
     }
 }

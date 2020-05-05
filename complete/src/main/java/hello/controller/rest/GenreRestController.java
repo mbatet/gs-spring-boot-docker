@@ -2,7 +2,7 @@ package hello.controller.rest;
 
 
 import hello.model.Genre;
-import hello.repository.GenreRepository;
+import hello.service.GenreService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,32 +12,31 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 
 @RestController
 @RequestMapping(value = "/rest/genres")
 public class GenreRestController {
 
-    //read "Field injection is not recommended – Spring IOC"
-    //https://blog.marcnuri.com/field-injection-is-not-recommended/
     @Autowired
-    private GenreRepository genreRepository;
+    private GenreService genreService;
 
     private static final Logger log = LoggerFactory.getLogger(GenreRestController.class);
 
 
     @Transactional
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-     public Iterable<Genre> index() {
+     public List<Genre> index() {
 
-        return genreRepository.findAll();
+        return genreService.findAll();
     }
 
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @Transactional
     public Genre get(@PathVariable  @NotNull Long id) {
-        return genreRepository.findById(id).get();
+        return genreService.get(id);
     }
 
 
@@ -48,7 +47,7 @@ public class GenreRestController {
     @Transactional
     public Genre put(@RequestBody  @NotNull Genre genre, BindingResult result) {
 
-        return genreRepository.save(genre);
+        return genreService.save(genre);
     }
 
 
