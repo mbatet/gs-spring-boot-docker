@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<header th:insert="general.html :: headerfiles"> </header>
+<body>
+
+<header th:insert="general.html :: header"> </header>
+<h2>Book: </h2>
+<p th:text="${book.id}"/>
+<p th:text="${book.name}"/>
+<p th:text="${book.genre.name}"/>
+
+<header th:insert="general.html :: footer"> </header>
+
+</body>
+
+
+</html>

@@ -14,7 +14,7 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 	* logback
 	* Basic @RestController to manage the REST API to save and retrieve entities
 	* Test for the rest controllers with junit tests using TestRestTemplate
-	* Added basic thymeleaf template, tested with a @WebMvcTest test
+	* Added basic thymeleaf template and template fragments (use thymeleaf templates for the shared parts like headers, footer...), tested with a @WebMvcTest test
 
 ## Roadmap
 
@@ -34,11 +34,11 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 * use jackson annotations to modify the marshalling / unmarshalling of the entities
 * use jackson json views
 * more testing
-* use thymeleaf templates for the shared parts (headers, menu...) and add css styling and js static files
+* add css styling and js static files ... add a bootstrap thymeleaf template
 * generate and retrieve actuator data
 * spring data REST: makes it easy to build hypermedia-driven REST web services on top of Spring Data repositories
 * add additional spring data goodies: pagination, sorting, query by example, support for transparent auditing (created, last changed)...
-* spring cloud bus (to make a distributed system)
+* spring cloud & spring cloud bus (to make a distributed system)
 
 ## More info
 

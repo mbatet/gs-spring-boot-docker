@@ -74,14 +74,14 @@ public class RestControllerTests {
 
 		adminService.deleteData(); //Per si de cas, per no tenir problemes insertant
 
-		ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:" + this.port + "/admin/insertData", String.class);
+		ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:" + this.port + "/rest/admin/insertData", String.class);
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 	}
 
 	@Test
 	public void testRetrieve() throws Exception {
 
-		ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:" + this.port + "/admin/retrieveData", String.class);
+		ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:" + this.port + "/rest/admin/retrieveData", String.class);
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 	}
 
@@ -95,7 +95,7 @@ public class RestControllerTests {
 		adminService.insertData(); //Per posar unes cuantes dades a recuperar
 
 		//Comprovem que podem recuperar un llistat de llibres
-		ResponseEntity<List> listBooksResponse = restTemplate.getForEntity("http://localhost:" + this.port + "/books/", List.class);
+		ResponseEntity<List> listBooksResponse = restTemplate.getForEntity("http://localhost:" + this.port + "/rest/books/", List.class);
 		assertEquals(HttpStatus.OK, listBooksResponse.getStatusCode());
 
 		List<Book> listBooks =  listBooksResponse.getBody();
@@ -106,7 +106,7 @@ public class RestControllerTests {
 
 
 		//Comprovem que podem recuperar un llibre determinat
-		ResponseEntity<Book> bookResponse = restTemplate.getForEntity("http://localhost:" + this.port + "/books/11", Book.class);
+		ResponseEntity<Book> bookResponse = restTemplate.getForEntity("http://localhost:" + this.port + "/rest/books/11", Book.class);
 		log.info("bookResponse" + bookResponse);
 		assertEquals(HttpStatus.OK, bookResponse.getStatusCode());
 
@@ -114,7 +114,7 @@ public class RestControllerTests {
 		assertEquals(book.getId(), Long.valueOf(11));
 
 		//Comprovem que podem recuperar un llistat de llibres per genere
-		ResponseEntity<List> listBooksResponseByGenre = restTemplate.getForEntity("http://localhost:" + this.port + "/books/genre/Scy-fi", List.class);
+		ResponseEntity<List> listBooksResponseByGenre = restTemplate.getForEntity("http://localhost:" + this.port + "/rest/books/genre/Scy-fi", List.class);
 		assertEquals(HttpStatus.OK, listBooksResponseByGenre.getStatusCode());
 
 		List<Book> listBooksByGenre =  listBooksResponse.getBody();
@@ -127,7 +127,7 @@ public class RestControllerTests {
 		Book newBook = new Book("The Lion, the Witch and the Wardrobe","12345800", genre.get());
 
 		//log.info("==============> newBook: " + newBook);
-		restTemplate.put("http://localhost:" + this.port + "/books/", newBook);
+		restTemplate.put("http://localhost:" + this.port + "/rest/books/", newBook);
 
 		List<Book> books = new ArrayList<Book>();
 		(bookRepository.findAll()).forEach(books::add);

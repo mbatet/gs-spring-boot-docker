@@ -7,12 +7,12 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-@Entity
+
 @Getter
 @Setter
+@Entity
 public class Book {
 
-  //https://github.com/laurasnchezglez/micronaut-library-example
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
