@@ -94,6 +94,15 @@ public class RestControllerTests {
 		adminService.deleteData(); //Per si de cas, per no tenir problemes insertant
 		adminService.insertData(); //Per posar unes cuantes dades a recuperar
 
+		//Comprovem que podem recuperar un llibre determinat
+		ResponseEntity<Book> bookResponse = restTemplate.getForEntity("http://localhost:" + this.port + "/rest/books/11", Book.class);
+		log.info("bookResponse" + bookResponse);
+		assertEquals(HttpStatus.OK, bookResponse.getStatusCode());
+
+		Book book = bookResponse.getBody();
+		assertEquals(book.getId(), Long.valueOf(11));
+
+		
 		//Comprovem que podem recuperar un llistat de llibres
 		ResponseEntity<List> listBooksResponse = restTemplate.getForEntity("http://localhost:" + this.port + "/rest/books/", List.class);
 		assertEquals(HttpStatus.OK, listBooksResponse.getStatusCode());
@@ -105,13 +114,7 @@ public class RestControllerTests {
 		log.info("listBooks.size(): " +sizeBefore);
 
 
-		//Comprovem que podem recuperar un llibre determinat
-		ResponseEntity<Book> bookResponse = restTemplate.getForEntity("http://localhost:" + this.port + "/rest/books/11", Book.class);
-		log.info("bookResponse" + bookResponse);
-		assertEquals(HttpStatus.OK, bookResponse.getStatusCode());
 
-		Book book = bookResponse.getBody();
-		assertEquals(book.getId(), Long.valueOf(11));
 
 		//Comprovem que podem recuperar un llistat de llibres per genere
 		ResponseEntity<List> listBooksResponseByGenre = restTemplate.getForEntity("http://localhost:" + this.port + "/rest/books/genre/Scy-fi", List.class);
