@@ -5,6 +5,8 @@ import hello.repository.GenreRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -23,11 +25,18 @@ public class GenreService {
     private static final Logger log = LoggerFactory.getLogger(GenreService.class);
 
 
+    @Cacheable("books")
     public List<Genre> findAll() {
+        log.info("[m:findAll][NOCACHE] Anem a buscar a la base de dades");
         Iterable<Genre> iterator = genreRepository.findAll();
         List<Genre> genres = new ArrayList<Genre>();
         iterator.forEach(genres::add);
         return genres;
+    }
+
+    @CacheEvict(value="books", allEntries=true)
+    public void deleteCacheBooks() {
+        log.info("[m:deleteCacheBooks] Cache deleted");
     }
 
 

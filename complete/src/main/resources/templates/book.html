@@ -1,49 +1,39 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-
-<header th:insert="general.html :: headerfiles"> </header>
-<body>
-
-<header th:insert="general.html :: header"> </header>
-<h2>Book: </h2>
-<p th:text="${book.id}"/>
-<p th:text="${book.name}"/>
-<p th:text="${book.genre.name}"/>
-
-
-<form action="#" th:action="@{/books/save}" th:object="${book}" method="post">
-    <table border="1">
-        <tr>
-            <td>Id</td>
-            <td><input type="number" th:field="*{id}" /></td>
-        </tr>
-        <tr>
-            <td>Name</td>
-            <td><input type="text" th:field="*{name}" /></td>
-        </tr>
-        <tr>
-            <td>Isbn</td>
-            <td><input type="text" th:field="*{isbn}" /></td>
-        </tr>
-        <tr>
-            <td>
-                <select th:field="*{genre}">
-                    <option th:each="gen : ${genres}"
-                            th:value="${gen.id}"
-                            th:text="${gen.name}"></option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td><input type="submit" value="Submit" /></td>
-        </tr>
-    </table>
-</form>
-
-
-<header th:insert="general.html :: footer"> </header>
-
-</body>
-
-
+    <header th:insert="general.html :: headerfiles"> </header>
+    <body>
+        <header th:insert="general.html :: header"> </header>
+        <h2>Book: </h2>
+        <form action="#" th:action="@{/books/save}" th:object="${book}" method="post">
+            <table border="1">
+                <tr>
+                    <td>Id</td>
+                    <td><input type="number" th:field="*{id}" /></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" th:field="*{name}" /></td>
+                </tr>
+                <tr>
+                    <td>Isbn</td>
+                    <td><input type="text" th:field="*{isbn}" /></td>
+                </tr>
+                <tr>
+                    <td>Gènere</td>
+                    <td>
+                        <select th:field="*{genre}">
+                            <option th:each="gen : ${genres}"
+                                    th:value="${gen.id}"
+                                    th:text="${gen.name}"></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        </form>
+        <p></p>
+        <header th:insert="general.html :: footer"> </header>
+    </body>
 </html>
