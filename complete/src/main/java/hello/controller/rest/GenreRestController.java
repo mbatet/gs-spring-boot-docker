@@ -29,7 +29,10 @@ public class GenreRestController {
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
      public List<Genre> index() {
 
-        return genreService.findAll();
+        List<Genre> genres =  genreService.findAll();
+
+        log.info("[m:index] genres: " + genres);
+        return genres;
     }
 
 

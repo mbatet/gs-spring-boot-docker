@@ -11,7 +11,8 @@ import java.util.Optional;
 
 //https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference
 
-
+//Podem no posar el component, però si no a lo millor no els tenim autowired als tests
+@Component
 public interface BookRepository extends CrudRepository<Book, Long> {
 
 
