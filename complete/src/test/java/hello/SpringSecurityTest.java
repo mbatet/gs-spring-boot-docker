@@ -34,9 +34,8 @@ public class SpringSecurityTest {
     public void loginWithValidUserThenAuthenticated() throws Exception {
         FormLoginRequestBuilder login = formLogin().user("user").password("password");
 
-        ResultActions result = mockMvc.perform(login);
-
-        result.andExpect(authenticated().withUsername("user"));
+       mockMvc.perform(login)
+        .andExpect(authenticated().withUsername("user"));
     }
 
     @Test

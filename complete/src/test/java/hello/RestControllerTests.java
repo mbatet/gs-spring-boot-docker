@@ -32,6 +32,7 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.*;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -63,12 +64,14 @@ public class RestControllerTests {
 
 
 	@Test
+	@WithMockUser
 	public void testMain() throws Exception {
 		ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:" + this.port + "/", String.class);
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 	}
 
 	@Test
+	@WithMockUser
 	public void testInserts() throws Exception {
 
 
@@ -79,6 +82,7 @@ public class RestControllerTests {
 	}
 
 	@Test
+	@WithMockUser
 	public void testRetrieve() throws Exception {
 
 		ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:" + this.port + "/rest/admin/retrieveData", String.class);
@@ -88,6 +92,7 @@ public class RestControllerTests {
 
 
 	@Test
+	@WithMockUser
 	public void testBookController() throws Exception {
 
 
