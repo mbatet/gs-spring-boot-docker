@@ -66,9 +66,10 @@ public class BookRestController {
     /*
      * En aquest cas, s'injecta el nou book com un json al requet body del PUT
      * */
-    @RequestMapping(value = "/", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/save", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
     @Transactional
-    public Book put(@RequestBody @NotNull Book book, BindingResult result) {
+    //public Book save(@RequestBody @NotNull Book book, BindingResult result) {
+    public Book save(@RequestBody Book book, BindingResult result) {
 
         log.info("[m:put] ===================> PERSISTIM NOU LLIBRE: " + book);
         Book bookPersisted = bookService.save(book);
