@@ -18,21 +18,22 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 	* Added basic thymeleaf template and template fragments (use thymeleaf templates for the shared parts like headers, footer...), tested with a @WebMvcTest test
 	* Added some views and forms with thymeleaf ... and form-bean mapping in the controller ... and validation and binding results ...
 	* Added data caching with @Cache annotation
-	* Added basic spring security config
+	* Added basic spring security config: 
+		* login form for the web app + testing for the web app (authenticated part / unauthenticated part)
+		* http basic auth for the rest controllers + testing for the authenticated rest controllers
 
 
 ## Roadmap
 
-* http basic auth for the rest controllers + testing the rest controllers when they are authenticated
-* Get properties from the property file
-* Add an application context,...right now there is none
-* Add some scheduled job (@Schedule)
 * Development, preproduction and production  profiles
+* Add some scheduled job (@Schedule)
+* Add an application context,...right now there is none
+* Get properties from the property file
 * Basic webapp functionalities: @InitBinder, @ModelAttribute, Interception (HandlerMapping) ...
-* Use ~~RestTemplate~~ WebClient for accesing rest services
+* Use ~~RestTemplate~~ WebClient for accesing third party rest services
 * Migrate TestRestTemplate to WebTestClient 
 * Add more complex auth with Spring security with LDAP & CAS integration
-* Entities list pagination (backend & frontend)
+* sorting & pagination (backend & frontend)
 
 ## backlog / wish list
 

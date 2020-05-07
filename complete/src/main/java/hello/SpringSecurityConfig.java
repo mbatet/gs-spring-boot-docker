@@ -31,9 +31,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                     .authorizeRequests().anyRequest().hasRole("USER")
                     .and().httpBasic().authenticationEntryPoint(authenticationEntryPoint())
                     .and().csrf().disable(); //si no petaran els posts / put... hauriem de habilitar de nou i posar el  al thymeleaf: https://www.baeldung.com/csrf-thymeleaf-with-spring-security
-
-
-            ;
         }
 
         @Bean
@@ -60,7 +57,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                     .loginPage("/login")
                     .failureUrl("/login-error")
                     .permitAll()
-
                     .and()
                     .logout()
                     .logoutSuccessUrl("/login")
@@ -69,7 +65,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
     }
-
 
     @Bean
     @Override
@@ -83,6 +78,4 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
         return new InMemoryUserDetailsManager(user);
     }
-
-
 }
