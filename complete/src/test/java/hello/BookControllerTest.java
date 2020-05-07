@@ -12,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -42,6 +43,7 @@ public class BookControllerTest {
     //A VEURE, PROVAR A TREURE EL AUTOWIRED: //https://blog.marcnuri.com/field-injection-is-not-recommended/
 
     @Test
+    @WithMockUser
     public void listBooks() throws Exception {
 
         adminService.deleteData(); //Per si de cas, per no tenir problemes insertant
@@ -55,6 +57,7 @@ public class BookControllerTest {
 
 
     @Test
+    @WithMockUser
     public void getBook() throws Exception {
 
 
