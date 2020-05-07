@@ -58,7 +58,7 @@ public class SpringSecurityTest {
     public void accessSecuredResourceUnauthenticatedThenRedirectsToLogin() throws Exception {
 
 
-        adminService.insertData();
+        adminService.cleanAndInsertData();
 
         mockMvc.perform(get("/books/"))
                 .andExpect(status().is3xxRedirection())
