@@ -64,7 +64,6 @@ public class RestControllerTests {
 
 
 	@Test
-	@WithMockUser
 	public void testMain() throws Exception {
 		ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:" + this.port + "/", String.class);
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
@@ -72,7 +71,6 @@ public class RestControllerTests {
 
 
 	@Test
-	@WithMockUser
 	public void testInserts() throws Exception {
 
 
@@ -83,7 +81,6 @@ public class RestControllerTests {
 	}
 
 	@Test
-	@WithMockUser
 	public void testRetrieve() throws Exception {
 
 		ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:" + this.port + "/rest/admin/retrieveData", String.class);
@@ -93,7 +90,6 @@ public class RestControllerTests {
 
 
 	@Test
-	@WithMockUser
 	public void testBookController() throws Exception {
 
 
