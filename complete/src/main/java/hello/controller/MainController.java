@@ -15,7 +15,7 @@ public class MainController {
 
 
     //Si no posem el "/" per defecte, l'anira a buscar a static/index.html
-    @GetMapping("/")
+    @GetMapping({"/", "/home", "/index.html"})
     public String home() {
 
         return "index";
