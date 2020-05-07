@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableJpaRepositories
 @EnableTransactionManagement
-class ApplicationConfig {
+class DataSourceConfig {
 
 
     @Bean
