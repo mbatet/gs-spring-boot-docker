@@ -29,7 +29,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         protected void configure(HttpSecurity http) throws Exception {
             http.antMatcher("/rest/**")
                     .authorizeRequests().anyRequest().hasRole("USER")
-                    .and().httpBasic().authenticationEntryPoint(authenticationEntryPoint());
+                    .and().httpBasic().authenticationEntryPoint(authenticationEntryPoint())
+                    .and().csrf().disable(); //si no peytaran els posts / put
+
+            ;
         }
 
         @Bean
