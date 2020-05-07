@@ -140,12 +140,15 @@ public class RestControllerTests {
 		Book newBook = new Book("The Lion, the Witch and the Wardrobe","12345800", genre.get());
 
 		log.info("==============> newBook: " + newBook);
-		//restTemplate.withBasicAuth("user", "password").put("http://localhost:" + this.port + "/rest/books/save", newBook);
+		restTemplate.withBasicAuth("user", "password").put("http://localhost:" + this.port + "/rest/books/save", newBook);
 
 
+		/*
 		HttpEntity<Book> entity = new HttpEntity<>(newBook);
 		ResponseEntity<Book> response = restTemplate.withBasicAuth("user", "password")
 				.exchange("http://localhost:" + this.port + "/rest/books/save", HttpMethod.PUT, entity, Book.class);
+				*/
+
 
 		long sizeAfter = bookRepository.count();
 

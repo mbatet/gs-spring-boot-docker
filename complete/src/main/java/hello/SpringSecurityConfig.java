@@ -23,14 +23,15 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     //El mes restrictiu ha de ser el primer
     @Configuration
     @Order(1)
-    public static class App1ConfigurationAdapter extends WebSecurityConfigurerAdapter {
+    public static class RestSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http.antMatcher("/rest/**")
                     .authorizeRequests().anyRequest().hasRole("USER")
                     .and().httpBasic().authenticationEntryPoint(authenticationEntryPoint())
-                    .and().csrf().disable(); //si no peytaran els posts / put
+                    .and().csrf().disable(); //si no petaran els posts / put... hauriem de habilitar de nou i posar el  al thymeleaf: https://www.baeldung.com/csrf-thymeleaf-with-spring-security
+
 
             ;
         }
@@ -47,7 +48,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Configuration
     @Order(2)
-    public static class CasWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
+    public static class WebLoginFormSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http
