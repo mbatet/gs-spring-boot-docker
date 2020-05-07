@@ -70,12 +70,13 @@ public class RestControllerTests {
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 	}
 
+
 	@Test
 	@WithMockUser
 	public void testInserts() throws Exception {
 
 
-		adminService.deleteData(); //Per si de cas, per no tenir problemes insertant
+		adminService.deleteData(); //Per no tenim problemes insertant dades que ja existeixin
 
 		ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:" + this.port + "/rest/admin/insertData", String.class);
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
@@ -96,8 +97,7 @@ public class RestControllerTests {
 	public void testBookController() throws Exception {
 
 
-		adminService.deleteData(); //Per si de cas, per no tenir problemes insertant
-		adminService.insertData(); //Per posar unes cuantes dades a recuperar
+		adminService.cleanAndInsertData(); //Per posar unes cuantes dades a recuperar
 
 		//withBasicAuth("user", "password")
 

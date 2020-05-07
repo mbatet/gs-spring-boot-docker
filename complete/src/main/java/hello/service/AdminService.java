@@ -6,10 +6,13 @@ import hello.model.Genre;
 import hello.repository.BookRepository;
 import hello.repository.CustomerRepository;
 import hello.repository.GenreRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -20,6 +23,7 @@ import java.util.Optional;
 @Component(value = "adminService")
 public class AdminService {
 
+    private static final Logger log = LoggerFactory.getLogger(AdminService.class);
 
     @Autowired
     private CustomerRepository customerRepository;
@@ -30,7 +34,8 @@ public class AdminService {
     @Autowired
     private BookRepository bookRepository;
 
-    public String insertData()
+    @Transactional
+    public synchronized String insertData()
     {
         //Moure tot això a al controller & service de Customer
         customerRepository.save(new Customer("Jack", "Bauer"));
@@ -40,10 +45,17 @@ public class AdminService {
         customerRepository.save(new Customer("Michelle", "Dessler"));
 
 
-        Genre scyfi = genreRepository.save(new Genre("Scy-fi"));
-        Genre adventure = genreRepository.save(new Genre("Adventure"));
-        Genre drama = genreRepository.save(new Genre("Drama"));
-        Genre science = genreRepository.save(new Genre("Science"));
+        Optional<Genre> genre = genreRepository.findByName("Scy-fi");
+        Genre scyfi = genre.isPresent() ? genre.get() : genreRepository.save(new Genre("Scy-fi"));
+
+        genre = genreRepository.findByName("Adventure");
+        Genre adventure = genre.isPresent() ? genre.get() : genreRepository.save(new Genre("Adventure"));
+
+        genre = genreRepository.findByName("Drama");
+        Genre drama = genre.isPresent() ? genre.get() : genreRepository.save(new Genre("Drama"));
+
+        genre = genreRepository.findByName("Science");
+        Genre science = genre.isPresent() ? genre.get() : genreRepository.save(new Genre("Science"));
 
         bookRepository.save(new Book("Brave New World","1234561", scyfi));
         bookRepository.save(new Book("Foundation","1234562", scyfi));
@@ -94,12 +106,24 @@ public class AdminService {
     }
 
 
-    public void deleteData()
+    @Transactional
+    public synchronized void deleteData()
     {
         customerRepository.deleteAll();
         bookRepository.deleteAll();
         genreRepository.deleteAll();
 
+    }
+
+    @Transactional
+    public synchronized void cleanAndInsertData() {
+        try {
+            this.deleteData();
+            this.insertData();
+        } catch (Exception e) {
+            log.error("[m:cleanAndInsertData] " + e.getMessage());
+        } finally {
+        }
     }
 
 }

@@ -46,8 +46,7 @@ public class BookControllerTest {
     @WithMockUser
     public void listBooks() throws Exception {
 
-        adminService.deleteData(); //Per si de cas, per no tenir problemes insertant
-        adminService.insertData(); //Per posar unes cuantes dades a recuperar
+        adminService.cleanAndInsertData(); //Per posar unes cuantes dades a recuperar
 
         ResultActions result = mockMvc.perform(get("/books/"));
 
