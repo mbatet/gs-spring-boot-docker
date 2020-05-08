@@ -25,7 +25,7 @@ public class GenreRestController {
     private static final Logger log = LoggerFactory.getLogger(GenreRestController.class);
 
 
-    @Transactional
+
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
      public List<Genre> index() {
 
@@ -37,7 +37,6 @@ public class GenreRestController {
 
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    @Transactional
     public Genre get(@PathVariable  @NotNull Long id) {
         return genreService.get(id);
     }
@@ -47,7 +46,6 @@ public class GenreRestController {
      * En aquest cas, s'injecta el nou book com un json al requet body del PUT
      * */
     @RequestMapping(value = "/", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
-    @Transactional
     public Genre put(@RequestBody  @NotNull Genre genre, BindingResult result) {
 
         return genreService.save(genre);
