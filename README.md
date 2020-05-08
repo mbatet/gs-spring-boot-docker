@@ -37,6 +37,7 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 
 ## backlog / wish list
 
+* actuator & monitoring
 * use jackson annotations to modify the marshalling / unmarshalling of the entities
 * use jackson json views
 * more testing
@@ -49,6 +50,23 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 ## More info
 
 [See this file](Docker%20+%20Spring.pdf)
+
+## How to run the application locally
+
+It's a gradle projecte, so you only need to execute: Gradle > Tasks > application > bootRun:
+
+* > cd gs-spring-boot-docker/complete
+* >./gradlew bootRun
+* - Go to http://localhost:8081/
+
+## How to make (and run) a new docker image:
+
+* > cd gs-spring-boot-docker/complete
+* > ./gradlew assemble
+* > mkdir -p build/dependency && (cd build/dependency; jar -xf ../libs/*.jar)
+* > sudo docker build --build-arg DEPENDENCY=build/dependency -t mbatet/gs-spring-boot-docker:versionXX.YY .
+* > sudo docker run -p 8081:8080 -t mbatet/gs-spring-boot-docker:versionXX.YY
+* - Go to http://localhost:8081/
 
 
 ## Credits

@@ -32,7 +32,6 @@ public class BookRestController {
 
 
     //http://localhost:8080/books/
-    @Transactional
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Book> index() {
 
@@ -45,7 +44,6 @@ public class BookRestController {
 
     //http://localhost:8080/books/11
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    @Transactional
     public Book get(@PathVariable @NotNull Long id) {
         log.info("[m:get] BUsquem llibre " + id);
 
@@ -57,7 +55,6 @@ public class BookRestController {
     }
 
     @RequestMapping(value = "/genre/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    @Transactional
     public List<Book> findByGenre(@PathVariable @NotNull String name) {
         return bookService.findByGenreName(name);
 
@@ -67,7 +64,6 @@ public class BookRestController {
      * En aquest cas, s'injecta el nou book com un json al requet body del PUT
      * */
     @RequestMapping(value = "/save", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
-    @Transactional
     //public Book save(@RequestBody @NotNull Book book, BindingResult result) {
     public Book save(@RequestBody Book book, BindingResult result) {
 
