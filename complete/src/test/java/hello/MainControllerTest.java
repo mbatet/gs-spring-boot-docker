@@ -30,20 +30,20 @@ public class MainControllerTest {
     public void homePage() throws Exception {
         // N.B. jsoup can be useful for asserting HTML content
         mockMvc.perform(get("/"))
-                .andExpect(content().string(containsString("Welcome.")));
+                .andExpect(content().string(containsString("spring starter template app")));
     }
 
     @Test
     @WithMockUser
-    public void greeting() throws Exception {
-        mockMvc.perform(get("/greeting"))
-                .andExpect(content().string(containsString("Hello, World!")));
+    public void about() throws Exception {
+        mockMvc.perform(get("/about"))
+                .andExpect(content().string(containsString("This is the about page")));
     }
 
     @Test
     @WithMockUser
     public void greetingWithUser() throws Exception {
-        mockMvc.perform(get("/greeting").param("name", "Greg"))
+        mockMvc.perform(get("/about").param("name", "Greg"))
                 .andExpect(content().string(containsString("Hello, Greg!")));
     }
 

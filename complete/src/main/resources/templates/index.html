@@ -1,32 +1,132 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-<header th:insert="general.html :: headerfiles"> </header>
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title>Spring boot dipta basic</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+
+    <!-- Favicons -->
+
+    <meta name="theme-color" content="#563d7c">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+
+    <link href="../static/css/starter-template.css" rel="stylesheet" th:href="@{/css/starter-template.css}"/>
+</head>
 
 <body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
 
-<div th:replace="/general.html :: header"></div>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/genres/">Genres</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/books/">Books</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/costumers/">Costumers</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/admin">Admin</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
 
-This is the <b>resources/templates/index.html</b> template. In this application you could see:
+<main role="main" class="container">
 
-<h2>Web App</h2>
-<p>You can see a thymeleaf template <a href="/greeting">here</a></p>
-<p><a href="/books/">books</a></p>
+    <div class="starter-template">
+        <h1>spring starter template app</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> This is a basic app with customers, books and genres entities.</p>
 
-<h2>REST API</h2>
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">A webb app</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><small class="text-muted">Some web pages and forms...</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>The <a href="/about">about</a> page</li>
+                        <li>The <a href="/books/">book list</a> here</li>
+                        <li>Or you can create <a href="/books/new">new book</a> or <a href="/genres/new">new genre</a></li>
+                    </ul>
+                    <a class="btn btn-lg btn-block btn-primary" href="/login" role="button">You will need to login</a>
 
-<p><a href="/rest/admin/insertData/">/insertData</a></p>
-<p><a href="/rest/admin/retrieveData/">/retrieveData</a></p>
-<p><a href="/rest/admin/deleteData/">/deleteData</a></p>
-<p><a href="/rest/genres/">genres</a></p>
-<p><a href="/rest/genres/7">generes/7</a></p>
-<p><a href="/books/">books</a></p>
-<p><a href="/rest/books/11">books/11</a></p>
-<p><a href="/rest/books/genre/Scy-fi">books/genre/Scy-fi</a></p>
-<p><a href="/rest/customers/">customers</a></p>
-<p><a href="/rest/customers/1">customers/1</a></p>
-<p></p>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">A rest API</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><small class="text-muted">Some -http basic auth- rest crud</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>List genres: <a href="/rest/genres/">genres</a></li>
+                        <li>Get a specific genre: <a href="/rest/genres/7">generes/7</a></li>
+                        <li>Get a specific book: <a href="/rest/books/11">books/11</a></li>
+                        <li>List books by genre: <a href="/rest/books/genre/Scy-fi">books/genre/Scy-fi</a></li>
+                        <li>List customers: <a href="/rest/customers/">customers</a></li>
+                        <li>Get a specific customer: <a href="/rest/customers/1">customers/1</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">And some utilities...</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><small class="text-muted">Insert first some random data</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Insert data: <a href="/rest/admin/insertData/">insertData</a></li>
+                        <li>See the data: <a href="/rest/admin/retrieveData/">retrieveData</a></li>
+                        <li>Delete all data: <a href="/rest/admin/deleteData/">deleteData</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-<div th:replace="/general.html :: footer"></div>
-</body>
+
+    </div>
+
+</main><!-- /.container -->
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="@{/js/bootstrap.js}"></script></body>
 </html>

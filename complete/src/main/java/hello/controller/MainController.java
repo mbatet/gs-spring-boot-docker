@@ -21,8 +21,8 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+    @GetMapping("/about")
+    public String about(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 
 
         var message = "Hello Docker World.  System.getProperty(\"java.version\") is....: " + System.getProperty("java.version");
@@ -30,7 +30,7 @@ public class MainController {
         model.addAttribute("name", name);
         model.addAttribute("message", message);
 
-        return "greeting";
+        return "about";
     }
 
 
