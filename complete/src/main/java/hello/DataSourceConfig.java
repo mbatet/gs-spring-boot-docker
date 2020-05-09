@@ -36,8 +36,15 @@ class DataSourceConfig {
         dataSource.setUsername(Preconditions.checkNotNull(env.getProperty("dataSource.username")));
         dataSource.setPassword(Preconditions.checkNotNull(env.getProperty("dataSource.password")));
         return dataSource;
-
          */
+        /*
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(env.getProperty(DATABASE_DRIVER));
+        dataSource.setUrl(env.getProperty(DATABASE_URL));
+        dataSource.setUsername(env.getProperty(DATABASE_USERNAME));
+        dataSource.setPassword(env.getProperty(DATABASE_PASSWORD));
+        return dataSource;
+        * */
 
     }
 
