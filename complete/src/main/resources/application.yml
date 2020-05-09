@@ -20,7 +20,10 @@ endpoints:
 
 server:
   port: 8080
+  servlet:
+    #Spring Boot, by default, serves content on the root context path (“/”).
+    context-path: /demoapp
 
 spring:
   application:
-    name: helloDocker
+    name: demoapp
