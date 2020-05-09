@@ -1,73 +1,10 @@
 <!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
 
-    <title>Spring boot dipta basic</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
-
-    <!-- Favicons -->
-
-    <meta name="theme-color" content="#563d7c">
-
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-    <!-- Custom styles for this template -->
-
-    <link href="../static/css/starter-template.css" rel="stylesheet" th:href="@{/css/starter-template.css}"/>
-</head>
+<head th:replace="/general.html :: head"></head>
 
 <body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/genres/">Genres</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/books/">Books</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/costumers/">Costumers</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/admin">Admin</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/about">About</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
-</nav>
+<nav th:replace="/general.html :: header-menu"></nav>
 
 <main role="main" class="container">
 
@@ -126,7 +63,6 @@
     </div>
 
 </main><!-- /.container -->
-
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="@{/js/bootstrap.js}"></script></body>
+<nav th:replace="/general.html :: footer"></nav>
+</body>
 </html>

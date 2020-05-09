@@ -1,28 +1,87 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="headerfiles">
-    <title>Thymeleaf Fragments: home</title>
-    <meta charset="UTF-8" />
-    <link th:href="@{/css/styles.css}" rel="stylesheet">
-</head>
-<body>
-<div th:fragment="header">
-    <h1>Welcome. This is the header fragment</h1>
-</div>
-<p>Go to the next page to see fragments in action</p>
-<aside>
-    <div>This is a sidebar</div>
-</aside>
-<div class="another">This is another sidebar</div>
-<footer th:fragment="footer">
-    This is the footer fragment
-    <a th:href="@{/}">Home</a> |
-    <a th:href="@{/about}">Greeting</a> |
-    <a th:href="@{/rest/admin/insertData/}">Data</a>  |
-    <a th:href="@{/rest/books/}">Books</a>  |
-    <a th:href="@{/rest/genres/}">Genre</a>  |
-    <a th:href="@{/rest/customers/}">Customers</a>
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+< lang="en">
+<head th:fragment="head">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
 
-</footer>
+    <title>Spring boot dipta basic</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+
+    <!-- Favicons -->
+
+    <meta name="theme-color" content="#563d7c">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+
+    <link href="../static/css/starter-template.css" rel="stylesheet" th:href="@{/css/starter-template.css}"/>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:fragment="header-menu">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/genres/">Genres</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/books/">Books</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/costumers/">Costumers</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/admin">Admin</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <main role="main" class="container">
+
+
+    </main><!-- /.container -->
+
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark" th:fragment="footer">
+        <a class="navbar-brand" href="#"> Marina Batet. No rights reserved. This is to illustrate how fragments work.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="@{/js/bootstrap.js}"></script>
+    </nav>
+
+
 </body>
+
 </html>
