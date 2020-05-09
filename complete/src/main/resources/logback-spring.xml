@@ -4,7 +4,7 @@
     <!--
     OKO, el directori logs s'ha d'haver creat al nostre container o no funcionara!!!
     -->
-    <property name="LOGS" value="./complete/logs" />
+    <property name="LOGS" value="./logs" />
 
     <appender name="Console"
               class="ch.qos.logback.core.ConsoleAppender">
