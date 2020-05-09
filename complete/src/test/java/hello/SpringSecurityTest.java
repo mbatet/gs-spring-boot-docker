@@ -78,7 +78,6 @@ public class SpringSecurityTest {
     @WithMockUser
     public void accessSecuredResourceAuthenticatedThenOk() throws Exception {
 
-
         mockMvc.perform(get("/books/"))
                 .andExpect(status().isOk());
     }

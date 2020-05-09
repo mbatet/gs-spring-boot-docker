@@ -30,7 +30,7 @@ public class MainControllerTest {
     public void homePage() throws Exception {
         // N.B. jsoup can be useful for asserting HTML content
         mockMvc.perform(get("/"))
-                .andExpect(content().string(containsString("spring starter template app")));
+                .andExpect(content().string(containsString("springboot starter template app")));
     }
 
     @Test

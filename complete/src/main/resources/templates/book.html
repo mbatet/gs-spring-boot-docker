@@ -1,39 +1,46 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-    <header th:insert="general.html :: headerfiles"> </header>
-    <body>
-        <header th:insert="general.html :: header"> </header>
-        <h2>Book: </h2>
-        <form action="#" th:action="@{/books/save}" th:object="${book}" method="post">
-            <table border="1">
-                <tr>
-                    <td>Id</td>
-                    <td><input type="number" th:field="*{id}" /></td>
-                </tr>
-                <tr>
-                    <td>Name</td>
-                    <td><input type="text" th:field="*{name}" /></td>
-                </tr>
-                <tr>
-                    <td>Isbn</td>
-                    <td><input type="text" th:field="*{isbn}" /></td>
-                </tr>
-                <tr>
-                    <td>Gènere</td>
-                    <td>
-                        <select th:field="*{genre}">
-                            <option th:each="gen : ${genres}"
-                                    th:value="${gen.id}"
-                                    th:text="${gen.name}"></option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="submit" value="Submit" /></td>
-                </tr>
-            </table>
-        </form>
-        <p></p>
-        <header th:insert="general.html :: footer"> </header>
-    </body>
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="/general.html :: head"></head>
+
+<body>
+<nav th:replace="/general.html :: header-menu"></nav>
+
+<main role="main" class="container">
+
+    <h2 th:text="'Book: ' + ${book.name}"></h2>
+
+    <form action="#" th:action="@{/books/save}" th:object="${book}" method="post">
+        <table>
+            <tr>
+                <td><label for="id">Id</label></td>
+                <td><input type="number" th:field="*{id}" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" th:field="*{name}" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td><label for="isbn">Isbn</label></td>
+                <td><input type="text" th:field="*{isbn}" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td><label for="genre">Gènere</label></td>
+                <td>
+                    <select th:field="*{genre}" class="form-control">
+                        <option th:each="gen : ${genres}"
+                                th:value="${gen.id}"
+                                th:text="${gen.name}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Submit" class="btn btn-lg btn-block btn-primary"/></td>
+            </tr>
+        </table>
+    </form>
+
+</main><!-- /.container -->
+<nav th:replace="/general.html :: footer"></nav>
+</body>
 </html>

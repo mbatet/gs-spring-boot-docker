@@ -46,7 +46,9 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 * spring data REST: makes it easy to build hypermedia-driven REST web services on top of Spring Data repositories
 * add additional spring data goodies: pagination, sorting, query by example, support for transparent auditing (created, last changed)...
 * spring cloud & spring cloud bus (to make a distributed system)
-
+<!--
+* file explorer to see the project structure and the file contents
+-->
 ## More info
 
 [See this file](Docker%20+%20Spring.pdf)
