@@ -15,8 +15,19 @@ public class ScheduledTasks {
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
-    @Scheduled(fixedRate = 10000)
+    //If we want to support parallel behavior in scheduled tasks, we need to add the @Async annotation:
+    //@Async
+    @Scheduled(fixedRate = 10000, initialDelay = 1000)
     public void reportCurrentTime() {
-        log.info("The time is now {}", dateFormat.format(new Date()));
+        log.info("[m:reportCurrentTime] The time is now {}", dateFormat.format(new Date()));
+    }
+
+
+    //cada hor al minut 05
+    @Scheduled(cron = "0 00 * * * ?")
+    public void scheduleTaskUsingCronExpression() {
+
+        long now = System.currentTimeMillis() / 1000;
+        log.info("[m:scheduleTaskUsingCronExpression] ==============> schedule tasks using cron jobs - " + now);
     }
 }
