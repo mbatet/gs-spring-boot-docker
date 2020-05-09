@@ -18,13 +18,13 @@ public class ScheduledTasks {
     //If we want to support parallel behavior in scheduled tasks, we need to add the @Async annotation:
     //@Async
     @Scheduled(fixedRate = 10000, initialDelay = 1000)
-    public void reportCurrentTime() {
-        log.info("[m:reportCurrentTime] The time is now {}", dateFormat.format(new Date()));
+    public void scheduleTaskUsingFixedRate() {
+        log.info("[m:scheduleTaskUsingFixedRate] The time is now {}", dateFormat.format(new Date()));
     }
 
 
-    //cada hor al minut 05
-    @Scheduled(cron = "0 00 * * * ?")
+    //cada minut al segon 00
+    @Scheduled(cron = "00 * * * * ?")
     public void scheduleTaskUsingCronExpression() {
 
         long now = System.currentTimeMillis() / 1000;
