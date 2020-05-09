@@ -2,6 +2,7 @@ package hello;
 
 import hello.controller.BookController;
 import hello.controller.MainController;
+import hello.repository.BookRepository;
 import hello.service.AdminService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -37,6 +38,8 @@ public class BookControllerTest {
     private MockMvc mockMvc;
     @Autowired
     private AdminService adminService;
+    @Autowired
+    private BookRepository bookRepository;
 
 
 
@@ -46,11 +49,13 @@ public class BookControllerTest {
     @WithMockUser
     public void listBooks() throws Exception {
 
+
         adminService.cleanAndInsertData(); //Per posar unes cuantes dades a recuperar
+        long count = bookRepository.count();
 
         ResultActions result = mockMvc.perform(get("/books/"));
 
-        result.andExpect(content().string(containsString("Book list")))
+        result.andExpect(content().string(containsString("We have " + count + " books")))
                 .andExpect(content().string(containsString("Brave New World")));
     }
 

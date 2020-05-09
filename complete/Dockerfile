@@ -18,9 +18,8 @@ RUN addgroup -S spring && adduser -S spring -G spring
 RUN mkdir complete
 RUN chown spring:spring complete
 USER spring:spring
-RUN mkdir complete/logs
-#RUN chown spring:spring ./complete/logs
-#RUN mkdir ~/logs
+RUN mkdir logs
+#RUN chown spring:spring logs
 ARG DEPENDENCY=target/dependency
 COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY ${DEPENDENCY}/META-INF /app/META-INF
