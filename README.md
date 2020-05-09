@@ -33,7 +33,7 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 * Use ~~RestTemplate~~ WebClient for accesing third party rest services
 * Migrate TestRestTemplate to WebTestClient 
 * Add more complex auth with Spring security with LDAP & CAS integration
-* sorting & pagination (backend & frontend)
+* searching & sorting & pagination (backend & frontend)
 
 ## backlog / wish list
 
@@ -46,7 +46,9 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 * spring data REST: makes it easy to build hypermedia-driven REST web services on top of Spring Data repositories
 * add additional spring data goodies: pagination, sorting, query by example, support for transparent auditing (created, last changed)...
 * spring cloud & spring cloud bus (to make a distributed system)
-
+<!--
+* [file explorer to see the project structure and the file contents] 
+-->
 ## More info
 
 [See this file](Docker%20+%20Spring.pdf)
@@ -57,7 +59,7 @@ It's a gradle projecte, so you only need to execute: Gradle > Tasks > applicatio
 
 * > cd gs-spring-boot-docker/complete
 * >./gradlew bootRun
-* - Go to http://localhost:8081/
+* Go to http://localhost:8081/
 
 ## How to make (and run) a new docker image:
 
@@ -66,7 +68,7 @@ It's a gradle projecte, so you only need to execute: Gradle > Tasks > applicatio
 * > mkdir -p build/dependency && (cd build/dependency; jar -xf ../libs/*.jar)
 * > sudo docker build --build-arg DEPENDENCY=build/dependency -t mbatet/gs-spring-boot-docker:versionXX.YY .
 * > sudo docker run -p 8081:8080 -t mbatet/gs-spring-boot-docker:versionXX.YY
-* - Go to http://localhost:8081/
+* Go to http://localhost:8081/
 
 
 ## Credits

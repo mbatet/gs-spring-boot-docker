@@ -1,32 +1,68 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-<header th:insert="general.html :: headerfiles"> </header>
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="/general.html :: head"></head>
 
 <body>
+<nav th:replace="/general.html :: header-menu"></nav>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <h1>springboot starter template app</h1>
+        <p class="lead">Use this template as a way to quickly start any new project.<br> This is a basic app with customers, books and genres entities.</p>
+
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">A webb app</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><small class="text-muted">Some web pages and forms...</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>The <a href="/about">about</a> page</li>
+                        <li>The <a href="/books/">book list</a> here</li>
+                        <li>Or you can create <a href="/books/new">new book</a> or <a href="/genres/new">new genre</a></li>
+                    </ul>
+                    <a class="btn btn-lg btn-block btn-primary" href="/login" role="button">Login here</a>
+
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">A rest api</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><small class="text-muted">Some -http basic auth- rest crud</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>List genres: <a href="/rest/genres/">genres</a></li>
+                        <li>Get a specific genre: <a href="/rest/genres/7">generes/7</a></li>
+                        <li>Get a specific book: <a href="/rest/books/11">books/11</a></li>
+                        <li>List books by genre: <a href="/rest/books/genre/Scy-fi">books/genre/Scy-fi</a></li>
+                        <li>List customers: <a href="/rest/customers/">customers</a></li>
+                        <li>Get a specific customer: <a href="/rest/customers/1">customers/1</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">And some utilities...</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><small class="text-muted">Insert first some random data</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Insert data: <a href="/rest/admin/insertData/">insertData</a></li>
+                        <li>See the data: <a href="/rest/admin/retrieveData/">retrieveData</a></li>
+                        <li>Delete all data: <a href="/rest/admin/deleteData/">deleteData</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
 
-<div th:replace="/general.html :: header"></div>
+    </div>
 
-This is the <b>resources/templates/index.html</b> template. In this application you could see:
-
-<h2>Web App</h2>
-<p>You can see a thymeleaf template <a href="/greeting">here</a></p>
-<p><a href="/books/">books</a></p>
-
-<h2>REST API</h2>
-
-<p><a href="/rest/admin/insertData/">/insertData</a></p>
-<p><a href="/rest/admin/retrieveData/">/retrieveData</a></p>
-<p><a href="/rest/admin/deleteData/">/deleteData</a></p>
-<p><a href="/rest/genres/">genres</a></p>
-<p><a href="/rest/genres/7">generes/7</a></p>
-<p><a href="/books/">books</a></p>
-<p><a href="/rest/books/11">books/11</a></p>
-<p><a href="/rest/books/genre/Scy-fi">books/genre/Scy-fi</a></p>
-<p><a href="/rest/customers/">customers</a></p>
-<p><a href="/rest/customers/1">customers/1</a></p>
-<p></p>
-
-<div th:replace="/general.html :: footer"></div>
+</main><!-- /.container -->
+<nav th:replace="/general.html :: footer"></nav>
 </body>
 </html>

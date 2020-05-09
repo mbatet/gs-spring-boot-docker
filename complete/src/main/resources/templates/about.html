@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="/general.html :: head"></head>
+
+<body>
+<nav th:replace="/general.html :: header-menu"></nav>
+
+<main role="main" class="container">
+
+    <h2>This is the about page</h2>
+
+    <p th:text="'Hello, ' + ${name} + '!'" />
+
+    <p th:text="'Java version: '+ ${message}" />
+
+    <p>This is a basic springboot application, with...</p>
+    <ul>
+        <li>lombok for the getters and setters</li>
+        <li>basic MVC pattern with the domain classes and a controller and a repository layer: Customer, CustomerController, CustomerRepository ...</li>
+        <li>basic spring data jpa functionalities  (h2 database + model entities + repository + saving and retrieving entities + dynamic query derivate from repository method names): Customer, CustomerRepository</li>
+        <li>a service layer (CustomerService, BookService...) that it's not really necessary, b/c they don't have any useful implementation but accessing to the repository and you can do that directly from the controller ... it's utility solely resides in illustrate the use of the scope </li>
+        <li>logback for the logging in it's default spring implementation (added a resources/logback-spring.xml file and that's it)</li>
+        <li>A basic @RestController to manage the REST API to save and retrieve entities</li>
+        <li>Testing for the rest controllers with junit tests using TestRestTemplate</li>
+        <li>basic thymeleaf template and template fragments (use thymeleaf templates for the shared parts like headers, footer...), tested with a @WebMvcTest test</li>
+        <li>Some views and forms with thymeleaf ... and form-bean mapping in the controller ... and validation and binding results ...</li>
+        <li>Data caching with @Cache annotation</li>
+        <li>Basic spring security config: login form for the web app + testing for the web app (authenticated part / unauthenticated part), http basic auth for the rest controllers + testing for the authenticated rest controllers</li>
+    </ul>
+
+
+</main><!-- /.container -->
+<nav th:replace="/general.html :: footer"></nav>
+</body>
+</html>
