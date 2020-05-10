@@ -21,13 +21,12 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 	* Added basic spring security config: 
 		* login form for the web app + testing for the web app (authenticated part / unauthenticated part)
 		* http basic auth for the rest controllers + testing for the authenticated rest controllers
-	* Add some scheduled job (@Schedule)
+	* Added some scheduled job (@Schedule)
 
 
 ## Roadmap
 
 * Development, preproduction and production  profiles
-
 * Add an application context,...right now there is none
 * Get properties from the property file
 * Basic webapp functionalities: @InitBinder, @ModelAttribute, Interception (HandlerMapping) ...
