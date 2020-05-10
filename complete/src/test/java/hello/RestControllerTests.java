@@ -27,6 +27,7 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -62,6 +63,10 @@ public class RestControllerTests {
 	@Autowired
 	private BookRepository bookRepository;
 
+	@Value("${server.servlet.context-path}")
+	private String contextPath;
+
+
 
 	@Test
 	public void testInserts() throws Exception {
@@ -69,14 +74,21 @@ public class RestControllerTests {
 
 		adminService.deleteData(); //Per no tenim problemes insertant dades que ja existeixin
 
-		ResponseEntity<String> entity = restTemplate.withBasicAuth("user", "password").getForEntity("http://localhost:" + this.port + "/rest/admin/insertData", String.class);
+		String url = "http://localhost:" + this.port + this.contextPath +  "/rest/admin/insertData";
+		log.info("[m:testInserts] =====> url: " + url);
+
+		ResponseEntity<String> entity = restTemplate.withBasicAuth("user", "password").getForEntity(url, String.class);
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 	}
 
 	@Test
 	public void testRetrieve() throws Exception {
 
-		ResponseEntity<String> entity = restTemplate.withBasicAuth("user", "password").getForEntity("http://localhost:" + this.port + "/rest/admin/retrieveData", String.class);
+		String url = "http://localhost:" + this.port + this.contextPath +  "/rest/admin/retrieveData";
+		log.info("[m:retrieveData] =====> url: " + url);
+
+
+		ResponseEntity<String> entity = restTemplate.withBasicAuth("user", "password").getForEntity(url, String.class);
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 	}
 
@@ -90,8 +102,13 @@ public class RestControllerTests {
 
 		//withBasicAuth("user", "password")
 
+		String url = "http://localhost:" + this.port + this.contextPath +  "/rest/books/";
+		log.info("[m:testBookList]  =====>  url: " + url);
+
+
+
 		//Comprovem que podem recuperar un llistat de llibres
-		ResponseEntity<List> listBooksResponse = restTemplate.withBasicAuth("user", "password").getForEntity("http://localhost:" + this.port + "/rest/books/", List.class);
+		ResponseEntity<List> listBooksResponse = restTemplate.withBasicAuth("user", "password").getForEntity(url, List.class);
 
 		assertEquals(HttpStatus.OK, listBooksResponse.getStatusCode());
 
@@ -104,8 +121,12 @@ public class RestControllerTests {
 
 	@Test
 	public void testGetBook() throws Exception {
+
+		String url = "http://localhost:" + this.port + this.contextPath +  "/rest/books/11";
+		log.info("[m:testGetBook] =====> url: " + url);
+
 		//Comprovem que podem recuperar un llibre determinat
-		ResponseEntity<Book> bookResponse = restTemplate.withBasicAuth("user", "password").getForEntity("http://localhost:" + this.port + "/rest/books/11", Book.class);
+		ResponseEntity<Book> bookResponse = restTemplate.withBasicAuth("user", "password").getForEntity(url, Book.class);
 		log.info("==================> bookResponse" + bookResponse);
 		assertEquals(HttpStatus.OK, bookResponse.getStatusCode());
 
@@ -117,7 +138,7 @@ public class RestControllerTests {
 	public void testListBooksByGenre() throws Exception {
 
 		//Comprovem que podem recuperar un llistat de llibres per genere
-		ResponseEntity<List> listBooksResponseByGenre = restTemplate.withBasicAuth("user", "password").getForEntity("http://localhost:" + this.port + "/rest/books/genre/Scy-fi", List.class);
+		ResponseEntity<List> listBooksResponseByGenre = restTemplate.withBasicAuth("user", "password").getForEntity("http://localhost:" + this.port + this.contextPath + "/rest/books/genre/Scy-fi", List.class);
 		assertEquals(HttpStatus.OK, listBooksResponseByGenre.getStatusCode());
 
 		List<Book> listBooksByGenre =  listBooksResponseByGenre.getBody();
@@ -140,7 +161,7 @@ public class RestControllerTests {
 		Book newBook = new Book("The Lion, the Witch and the Wardrobe","12345800", genre.get());
 
 		log.info("==============> newBook: " + newBook);
-		restTemplate.withBasicAuth("user", "password").put("http://localhost:" + this.port + "/rest/books/save", newBook);
+		restTemplate.withBasicAuth("user", "password").put("http://localhost:" + this.port + this.contextPath + "/rest/books/save", newBook);
 
 
 		/*
