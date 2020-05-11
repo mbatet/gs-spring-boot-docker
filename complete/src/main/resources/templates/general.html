@@ -53,6 +53,10 @@
                    </li>
                -->
 
+                <li class="nav-item active" sec:authorize="isAuthenticated()">
+                        <a class="nav-link" href="/demoapp/logout">Estas autenticat! Logout</a>
+                </li>
+
                 <li class="nav-item active">
                     <a class="nav-link" href="/demoapp/">Home</a>
                 </li>
