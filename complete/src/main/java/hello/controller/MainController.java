@@ -66,7 +66,7 @@ public class MainController {
         if(auth.isAuthenticated() && auth.getClass().getName().contains("UsernamePasswordAuthenticationToken"))
         {
             //Jo crec que això no bva pq la accio de login es sobreescriu...
-            return "index";
+            //return "index";
             //log.info("[m:login] auth: " + auth);
         }
 
