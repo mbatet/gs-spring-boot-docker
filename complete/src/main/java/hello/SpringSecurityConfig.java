@@ -20,6 +20,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationEn
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
+
     //El mes restrictiu ha de ser el primer
     @Configuration
     @Order(1)
@@ -50,33 +51,46 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         protected void configure(HttpSecurity http) throws Exception {
             http
                     .authorizeRequests()
-                    .antMatchers("/", "/home", "/css/**", "/js/**").permitAll()
-                    .anyRequest().authenticated()
+                    //.and()
+                        .antMatchers("/", "/home", "/css/**", "/js/**","/login","/login-error", "/logout" ).permitAll()
+                    .and().authorizeRequests()
+                        .antMatchers("/books/**", "/genres/**", "/costumers/**", "/about").hasRole("USER")
                     .and()
-                    .formLogin()
-                    .loginPage("/login")
-                    .successForwardUrl("http://localhost:8080/demoapp/")
-                    .failureUrl("/login-error")
-                    .permitAll()
+                        .formLogin()
+                        .loginPage("/login").defaultSuccessUrl("/about")
+                        //.successForwardUrl("http://localhost:8080/demoapp/")
+                        .failureUrl("/login-error")
+                        .permitAll()
                     .and()
-                    .logout()
-                    .logoutSuccessUrl("/login")
-                    .permitAll();
+                        .logout()
+                        .logoutSuccessUrl("/login")
+                        .permitAll();
         }
 
+        @Bean
+        @Override
+        public UserDetailsService userDetailsService() {
+            UserDetails user =
+                    User.withDefaultPasswordEncoder()
+                            .username("user")
+                            .password("password")
+                            .roles("USER")
+                            .build();
 
+            return new InMemoryUserDetailsManager(user);
+        }
     }
 
-    @Bean
-    @Override
-    public UserDetailsService userDetailsService() {
-        UserDetails user =
-                User.withDefaultPasswordEncoder()
-                        .username("user")
-                        .password("password")
-                        .roles("USER")
-                        .build();
+/*
+    @Configuration
+    @Order(40)
+    public static class AnonymousConfigurationAdapter extends WebSecurityConfigurerAdapter {
 
-        return new InMemoryUserDetailsManager(user);
-    }
+        protected void configure(HttpSecurity http) throws Exception {
+
+            http.authorizeRequests().antMatchers("/", "/home", "/css/**", "/js/**","/login","/login-error", "/logout" ).anonymous();
+        }
+    }*/
+
+
 }
