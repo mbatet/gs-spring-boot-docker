@@ -2,8 +2,11 @@ package hello;
 
 import hello.controller.BookController;
 import hello.controller.MainController;
+import hello.model.Book;
 import hello.repository.BookRepository;
 import hello.service.AdminService;
+import hello.service.BookService;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +24,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import java.util.List;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -40,6 +45,8 @@ public class BookControllerTest {
     private AdminService adminService;
     @Autowired
     private BookRepository bookRepository;
+    @Autowired
+    private BookService bookService;
 
 
 
@@ -73,11 +80,16 @@ public class BookControllerTest {
     @WithMockUser
     public void getBook() throws Exception {
 
+        //adminService.cleanAndInsertData(); //Per posar unes cuantes dades a recuperar
 
-        ResultActions result = mockMvc.perform(get("/books/11"));
+        List<Book> books = bookService.findAll();
+        Book book = books.get(0);
+
+
+        ResultActions result = mockMvc.perform(get("/books/" + book.getId()));
 
         result.andExpect(content().string(containsString("Book:")))
-                .andExpect(content().string(containsString("Foundation")));
+                .andExpect(content().string(containsString(book.getName())));
     }
 
 
