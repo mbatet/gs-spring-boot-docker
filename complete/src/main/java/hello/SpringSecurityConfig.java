@@ -55,6 +55,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                     .and()
                     .formLogin()
                     .loginPage("/login")
+                    .successForwardUrl("http://localhost:8080/demoapp/")
                     .failureUrl("/login-error")
                     .permitAll()
                     .and()

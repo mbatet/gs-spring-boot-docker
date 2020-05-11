@@ -1,30 +1,15 @@
 package hello.service;
 
-import hello.controller.BookController;
 import hello.model.Book;
-import hello.model.Customer;
-import hello.model.Genre;
 import hello.repository.BookRepository;
-import hello.repository.CustomerRepository;
-import hello.repository.GenreRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.transaction.Transactional;
-import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 //valors possibles de scoped epenent del que volguem: singleton | prototype | request | session | application | websocket
 @Scope(value = "singleton")
