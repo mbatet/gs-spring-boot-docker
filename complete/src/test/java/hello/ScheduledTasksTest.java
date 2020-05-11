@@ -13,13 +13,13 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.verify;
 
 @SpringBootTest
-@Ignore("L'ignorem perqué necessita 2 minuts sencer per poder fer el test i assegurar les planificacions, pero funciona i passa OK")
 public class ScheduledTasksTest {
 
     @SpyBean
     ScheduledTasks tasks;
 
     @Test
+    @Ignore("L'ignorem perqué necessita 2 minuts sencer per poder fer el test i assegurar les planificacions, pero funciona i passa OK")
     public void scheduleTaskUsingFixedRate() {
         await().atMost(Duration.ONE_MINUTE).untilAsserted(() -> {
             verify(tasks, atLeast(6)).scheduleTaskUsingFixedRate();
@@ -27,6 +27,7 @@ public class ScheduledTasksTest {
     }
 
     @Test
+    @Ignore("L'ignorem perqué necessita 2 minuts sencer per poder fer el test i assegurar les planificacions, pero funciona i passa OK")
     public void scheduleTaskUsingCronExpression() {
         await().atMost(Duration.ONE_MINUTE).untilAsserted(() -> {
             verify(tasks, atLeast(1)).scheduleTaskUsingCronExpression();

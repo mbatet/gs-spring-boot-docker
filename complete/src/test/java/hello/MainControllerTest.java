@@ -17,7 +17,7 @@ import static org.junit.Assert.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
-@ComponentScan(basePackages = {"hello"})
+//@ComponentScan(basePackages = {"hello"})
 @WebMvcTest(controllers = MainController.class)
 public class MainControllerTest {
 
