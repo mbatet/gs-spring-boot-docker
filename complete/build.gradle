@@ -24,7 +24,7 @@ apply plugin: 'com.google.cloud.tools.jib'
 // end::plugin[]
 
 //group = 'springio'
-group = 'mbatet'
+group = 'hello'
 
 bootJar {
     baseName = 'gs-spring-boot-docker'
@@ -60,22 +60,24 @@ dependencies {
 
     //compile 'org.awaitility:awaitility:3.1.2'
 
-    implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    //compile 'org.springframework.boot:spring-boot-starter'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'org.springframework.boot:spring-boot-starter-validation'
+    compile 'org.springframework.boot:spring-boot-starter-cache'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile 'com.h2database:h2'
 
 
-    testImplementation 'org.awaitility:awaitility:3.1.2'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.security:spring-security-test'
+    testCompile 'org.awaitility:awaitility:3.1.2'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'org.springframework.security:spring-security-test'
 
 
-    implementation 'org.springframework.data:spring-data-jpa:2.1.6.RELEASE'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.1.3.RELEASE'
-    implementation 'com.h2database:h2:1.4.197'
+    //implementation 'org.springframework.data:spring-data-jpa:2.1.6.RELEASE'
+    //implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.1.3.RELEASE'
+    //implementation 'com.h2database:h2:1.4.197'
 
     //lombok per getters / setters / constructors
     compileOnly 'org.projectlombok:lombok'

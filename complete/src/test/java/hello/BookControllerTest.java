@@ -27,9 +27,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 
-
-
-
 @ComponentScan(basePackages = {"hello"})
 @WebMvcTest(controllers = BookController.class)
 public class BookControllerTest {
@@ -53,7 +50,7 @@ public class BookControllerTest {
         adminService.cleanAndInsertData(); //Per posar unes cuantes dades a recuperar
         long count = bookRepository.count();
 
-        ResultActions result = mockMvc.perform(get("/books/"));
+        ResultActions result = mockMvc.perform(get("/demoapp/books/"));
 
         result.andExpect(content().string(containsString("We have " + count + " books")))
                 .andExpect(content().string(containsString("Brave New World")));
@@ -65,7 +62,7 @@ public class BookControllerTest {
     public void getBook() throws Exception {
 
 
-        ResultActions result = mockMvc.perform(get("/books/11"));
+        ResultActions result = mockMvc.perform(get("/demoapp/books/11"));
 
         result.andExpect(content().string(containsString("Book:")))
                 .andExpect(content().string(containsString("Foundation")));

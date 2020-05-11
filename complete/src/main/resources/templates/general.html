@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 < lang="en">
 <head th:fragment="head">
     <meta charset="utf-8">
@@ -42,22 +43,30 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Home</a>
+                    <a href="#">
+                        <div sec:authorize="isAuthenticated()">
+                            Estas autenticat! <p sec:authentication="name"></p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/demoapp/">Home</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/genres/">Genres</a>
+                    <a class="nav-link" href="/demoapp/genres/">Genres</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/books/">Books</a>
+                    <a class="nav-link" href="/demoapp/books/">Books</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/costumers/">Costumers</a>
+                    <a class="nav-link" href="/demoapp/costumers/">Costumers</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/admin">Admin</a>
+                    <a class="nav-link" href="/demoapp/admin">Admin</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/about">About</a>
+                    <a class="nav-link" href="/demoapp/about">About</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
