@@ -12,8 +12,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 
 @SpringBootApplication
-//@EnableCaching  //Aquesta anotacio nomes si volem habilitar la cache
-//@EnableScheduling //Aquesta anotacio nomes si volem habilitar jobs
+@EnableCaching  //Aquesta anotacio nomes si volem habilitar la cache
+@EnableScheduling //Aquesta anotacio nomes si volem habilitar jobs
 public class Application {
 
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
