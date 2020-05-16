@@ -27,3 +27,14 @@ COPY ${DEPENDENCY}/BOOT-INF/classes /app
 #Copiar el hello.jar i totes les dependencies, i a veure si així no necessitem fer el dir de dependencies
 #COPY build/libs/library-example-0.1-all.jar app.jar
 ENTRYPOINT ["java","-cp","app:app/lib/*","hello.Application"]
+
+
+#####################################################
+#FROM openjdk:8-jdk-alpine as build
+#WORKDIR /workspace/app
+#COPY target/*.jar app.jar
+#RUN mkdir target && cd target && jar -xf ../*.jar
+#FROM openjdk:8-jdk-alpine
+#VOLUME /tmp
+#ARG DEPENDENCY=/workspace/app/target
+#####################################################

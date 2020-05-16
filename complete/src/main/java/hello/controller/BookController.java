@@ -34,8 +34,7 @@ public class BookController {
     @Autowired
     GenreService genreService;
 
-    //http://localhost:8080/books/
-
+    //http://localhost:8080/demoapp/books/
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model) {
 
@@ -45,7 +44,20 @@ public class BookController {
     }
 
 
-    //http://localhost:8080/books/11
+    //http://localhost:8080/demoapp/books/new
+    @RequestMapping(value = "/new", method = RequestMethod.GET)
+    public String newBook(Model model) {
+
+        List<Genre> genres = genreService.findAll();
+        model.addAttribute("genres", genres);
+        
+        Book book = new Book();
+        model.addAttribute("book", book);
+        return "book";
+    }
+
+
+    //http://localhost:8080/demoapp/books/11
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String get(@PathVariable @NotNull Long id, Model model) {
 

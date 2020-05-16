@@ -26,10 +26,12 @@ Demo gradle project with Spring boot + Docker + Java 13 + Alpine distr
 
 ## Roadmap
 
+* springboot devtools
 * Development, preproduction and production  profiles
 * Add an application context,...right now there is none
 * Get properties from the property file
 * Basic webapp functionalities: @InitBinder, @ModelAttribute, Interception (HandlerMapping) ...
+* Add basic sendMail service
 * Use ~~RestTemplate~~ WebClient for accesing third party rest services
 * Migrate TestRestTemplate to WebTestClient 
 * Add more complex auth with Spring security with LDAP & CAS integration
