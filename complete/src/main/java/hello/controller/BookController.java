@@ -48,6 +48,8 @@ public class BookController {
     @RequestMapping(value = "/new", method = RequestMethod.GET)
     public String newBook(Model model) {
 
+        log.info("[m:newBook] ...");
+
         List<Genre> genres = genreService.findAll();
         model.addAttribute("genres", genres);
         

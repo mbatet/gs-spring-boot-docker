@@ -17,10 +17,14 @@ spring:
     driverClassName: org.h2.Driver
     username: sa
     password: ""
+  devtools:
+    restart:
+      exclude: static/**
+#    remote:
+#      debug:
+#        local-port: 8010
+      trigger-file: MainController.java
 
-
-
-endpoints:
   health:
     sensitive: false
   restart:

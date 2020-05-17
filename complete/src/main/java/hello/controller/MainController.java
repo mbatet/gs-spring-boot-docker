@@ -54,13 +54,7 @@ public class MainController {
     public String login() {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        log.info("[m:login] auth: " + auth);
-        log.info("[m:login] auth.isAuthenticated(): " + auth.isAuthenticated());
-        log.info("[m:login] auth.getName(): " + auth.getName());
-        log.info("[m:login] auth.getPrincipal(): " + auth.getPrincipal());
-        log.info("[m:login] auth.getClass(): " + auth.getClass().getName());
-        log.info("[m:login] auth.getPrincipal().getClass: " + auth.getPrincipal().getClass().getName());
-
+        log.info("[m:login] auth.getName(): " + auth.getName() + " - auth.isAuthenticated(): " + auth.isAuthenticated() + " - auth.getPrincipal(): " + auth.getPrincipal() + " - auth.getClass(): " + auth.getClass().getName() + " +  auth: " + auth);
 
         //TODO: spring security mal configurat, si no estas autenticat no hauries de tenir oauth
         if(auth.isAuthenticated() && auth.getClass().getName().contains("UsernamePasswordAuthenticationToken"))
