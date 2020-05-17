@@ -2,6 +2,7 @@ package hello.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -19,10 +20,17 @@ public class MainController {
     private static final Logger log = LoggerFactory.getLogger(MainController.class);
 
 
+    //TODO: Posar amb el @Model a tots els modeslviews sense tenir-ho que fer explicit
+    @Value("${environments.dev.app.name}")
+    private String appName;
+
+
     //Si no posem el "/" per defecte, l'anira a buscar a static/index.html
     @GetMapping({"/", "/home", "/index.html"})
-    public String home() {
+    public String home(Model model) {
 
+
+        model.addAttribute("appName", appName);
         return "index";
     }
 

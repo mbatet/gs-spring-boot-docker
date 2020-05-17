@@ -35,6 +35,12 @@ spring:
 #ribbon:
 #  ServerListRefreshInterval: 1000
 
-
+environments:
+  dev:
+    app:
+      name: 'demoapp: springboot starter template app (DEV PROFILE)'
+  prod:
+    app:
+      name: 'demoapp: springboot starter template app (PRODUCTION PROFILE)'
 
 
