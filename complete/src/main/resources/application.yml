@@ -38,9 +38,9 @@ spring:
 environments:
   dev:
     app:
-      name: 'demoapp: springboot starter template app (DEV PROFILE)'
+      name: 'demoapp: springboot starter template app (dev profile)'
   prod:
     app:
-      name: 'demoapp: springboot starter template app (PRODUCTION PROFILE)'
+      name: 'demoapp: springboot starter template app (prod profile)'
 
 

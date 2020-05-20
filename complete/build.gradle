@@ -61,14 +61,17 @@ dependencies {
      * Devtools:
      * Cal afegir la dependencia, i hauria d'apareixer el missatge "LiveReload server is running on port" al reiniciar la app
      * https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-devtools-restart
-     * PERO OJO, A L'INTELLIJ PER DEFECTE NO FUNCIONARÀ:
-     * LLEGIR: https://stackoverflow.com/questions/33869606/intellij-15-springboot-devtools-livereload-not-working
+     * PERO OJO, A L'INTELLIJ PER DEFECTE NO FUNCIONARÀ SI NO FEM MÉS COSES:
+     * LLEGIR:
+     *  https://dev.to/suin/spring-boot-developer-tools-how-to-enable-automatic-restart-in-intellij-idea-1c6i
+     *  https://stackoverflow.com/questions/33869606/intellij-15-springboot-devtools-livereload-not-working     *
      *
-     * Sol 1 (a mi no m'ha funcionat, però ho veuria millor opció si anés):
+     * Sol 1:
      *  - In your intellij IDEA go to: file->settings->Build,execution,deployment. Go to ->Compiler->build project automatically.
      *  - In your intellij IDEA: SHIFT+Ctrl+A -> Type "Registry" -> check de option "compiler.automake.allow.when.app.running"
+     *  - Finally what must be noted is how to start the application. The application must be started by running "main" function instead of the Gradle task "bootRun"
      *
-     * Sol 2 (el que a mi m'ha funcionat):
+     * Sol 2:
      *  - run app debug mode and press Ctrl + f9 (short-cut for build)
      *
     */
